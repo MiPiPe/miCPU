@@ -44,7 +44,7 @@ adder PCAdder(.a(PCOUT), .b(16'b1), .out(nPC));
 adder BranchAdder(.a(nPC), .b(imm_extended), .out(branch_adder_out));
 assign raddr2 = (RegDst)? INST[11:8] : INST[3:0];
 assign alu_in2 = (ALUSrc)? imm_extended : rdata2;
-assign wdata = (mem_to_reg)? aluout : rdata_mem; 
+assign wdata = (mem_to_reg)? rdata_mem : aluout; 
 
 always @((clk))
 begin

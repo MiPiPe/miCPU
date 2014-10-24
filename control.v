@@ -67,7 +67,7 @@ module control(
     branch = (inst == `BEQ)? 1'b1 : 1'b0;
     mem_to_reg = (inst == `LW)? 1'b1 : 1'b0;
     mem_write = (inst == `SW)? 1'b1 : 1'b0;
-    ALUSrc = (inst == `SLL || inst == `SRL)? 1'b1 : 1'b0;
+    ALUSrc = (inst == `SLL || inst == `SRL || inst == `LW || inst == `SW)? 1'b1 : 1'b0;
     RegDst = (inst == `SW || inst == `BEQ)? 1'b1 : 1'b0;
 
   end

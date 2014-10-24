@@ -7,21 +7,20 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/Automatic `includes</ClosedNode>
          <ClosedNode>/pipelined_regfile_2stage C:|CZ3001|pipelined_2_stage.v</ClosedNode>
          <ClosedNode>/pipelined_regfile_3stage C:|CZ3001|pipelined_regfile_3stage.v</ClosedNode>
+         <ClosedNode>/pipelined_regfile_3stage D:|NTU|CZ3001 Advanced Computer Architecture|Project|miCPU|pipelined_regfile_3stage.v</ClosedNode>
          <ClosedNode>/test_bench_2_stage_pipeline C:|CZ3001|test_bench_2_stage_pipeline.v/uut - pipelined_regfile_2stage</ClosedNode>
          <ClosedNode>/test_bench_3_stage_pipeline C:|CZ3001|test_bench_3_stage_pipeline.v/uut - pipelined_regfile_3stage</ClosedNode>
-         <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>part1_without_pipeline (C:/Users/Xinzi/Documents/CZ3001/CZ3001-master/part1_without_pipeline.v)</SelectedItem>
+         <SelectedItem>part1_without_pipeline (D:/NTU/CZ3001 Advanced Computer Architecture/Project/miCPU/part1_without_pipeline.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >16</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000158000000020000000000000000000000000200000064ffffffff000000810000000300000002000001580000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000145000000020000000000000000000000000200000064ffffffff000000810000000300000002000001450000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>part1_without_pipeline (C:/Users/Xinzi/Documents/CZ3001/CZ3001-master/part1_without_pipeline.v)</CurrentItem>
+      <CurrentItem>part1_without_pipeline (D:/NTU/CZ3001 Advanced Computer Architecture/Project/miCPU/part1_without_pipeline.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -29,13 +28,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -44,7 +43,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002b3000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001e70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001c20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>adder.v</CurrentItem>
    </ItemView>
@@ -69,31 +68,30 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>View RTL Schematic</SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>View RTL Schematic</CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/pipelined_regfile_2stage C:|CZ3001|pipelined_2_stage.v</ClosedNode>
          <ClosedNode>/pipelined_regfile_3stage C:|CZ3001|pipelined_regfile_3stage.v</ClosedNode>
-         <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>part1_without_pipeline (C:/CZ3001/part1_without_pipeline.v)</SelectedItem>
+         <SelectedItem>C0 - control (D:/NTU/CZ3001 Advanced Computer Architecture/Project/miCPU/control.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000154000000020000000000000000000000000200000064ffffffff000000810000000300000002000001540000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>part1_without_pipeline (C:/CZ3001/part1_without_pipeline.v)</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000167000000020000000000000000000000000200000064ffffffff000000810000000300000002000001670000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>C0 - control (D:/NTU/CZ3001 Advanced Computer Architecture/Project/miCPU/control.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -101,25 +99,25 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Update All Schematic Files</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Update All Schematic Files</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Behavioral Check Syntax</SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Behavioral Check Syntax</CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
 </Project>

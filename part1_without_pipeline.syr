@@ -160,9 +160,11 @@ Elaborating module <alu>.
 
 Elaborating module <data_memory>.
 WARNING:HDLCompiler:816 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 33: System function call feof not supported
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 47: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 57: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 58: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 50: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 58: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 59: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 65: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 66: System task fclose ignored for synthesis
 WARNING:HDLCompiler:189 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 65: Size mismatch in connection of port <addr>. Formal port size is 4-bit while actual signal size is 16-bit.
 
 =========================================================================
@@ -252,38 +254,40 @@ Unit <alu> synthesized.
 
 Synthesizing Unit <data_memory>.
     Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v".
-    Found 256-bit register for signal <n0028[255:0]>.
+WARNING:Xst:3015 - Contents of array <memory> may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
+    Found 16x16-bit single-port RAM <Mram_memory> for signal <memory>.
     Found 16-bit register for signal <read_data>.
-    Found 16-bit 16-to-1 multiplexer for signal <addr[3]_memory[15][15]_wide_mux_1_OUT> created at line 52.
     Summary:
-	inferred 272 D-type flip-flop(s).
-	inferred  17 Multiplexer(s).
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 Unit <data_memory> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
+ 16x16-bit single-port RAM                             : 1
  65536x16-bit dual-port RAM                            : 1
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 3
  16-bit adder                                          : 2
  16-bit addsub                                         : 1
-# Registers                                            : 5
+# Registers                                            : 4
  16-bit register                                       : 3
- 256-bit register                                      : 2
+ 256-bit register                                      : 1
 # Latches                                              : 4
  1-bit latch                                           : 4
 # Comparators                                          : 4
  16-bit comparator equal                               : 1
  16-bit comparator lessequal                           : 1
  4-bit comparator equal                                : 2
-# Multiplexers                                         : 55
- 1-bit 2-to-1 multiplexer                              : 4
- 16-bit 16-to-1 multiplexer                            : 4
- 16-bit 2-to-1 multiplexer                             : 46
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 6
+ 16-bit 16-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 30
  4-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 2
  16-bit shifter logical left                           : 1
@@ -298,6 +302,21 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+
+Synthesizing (advanced) Unit <data_memory>.
+INFO:Xst:3231 - The small RAM <Mram_memory> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <data_memory> synthesized (advanced).
 
 Synthesizing (advanced) Unit <part1_without_pipeline>.
 INFO:Xst:3230 - The RAM description <im/Mram_memory> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
@@ -323,24 +342,24 @@ Unit <part1_without_pipeline> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
+ 16x16-bit single-port distributed RAM                 : 1
  65536x16-bit dual-port distributed RAM                : 1
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 3
  16-bit adder                                          : 2
  16-bit addsub                                         : 1
-# Registers                                            : 560
- Flip-Flops                                            : 560
+# Registers                                            : 304
+ Flip-Flops                                            : 304
 # Comparators                                          : 4
  16-bit comparator equal                               : 1
  16-bit comparator lessequal                           : 1
  4-bit comparator equal                                : 2
-# Multiplexers                                         : 70
- 1-bit 16-to-1 multiplexer                             : 16
- 1-bit 2-to-1 multiplexer                              : 4
+# Multiplexers                                         : 40
+ 1-bit 2-to-1 multiplexer                              : 6
  16-bit 16-to-1 multiplexer                            : 3
- 16-bit 2-to-1 multiplexer                             : 46
+ 16-bit 2-to-1 multiplexer                             : 30
  4-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 2
  16-bit shifter logical left                           : 1
@@ -353,282 +372,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <memory_15_160> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_161> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_162> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_163> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_164> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_165> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_166> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_167> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_168> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_169> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_170> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_171> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_172> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_173> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_174> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_175> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_176> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_177> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_178> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_179> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_180> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_181> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_182> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_183> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_184> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_185> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_186> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_187> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_188> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_189> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_190> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_191> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_128> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_129> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_130> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_131> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_132> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_133> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_134> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_135> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_136> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_137> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_138> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_139> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_140> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_141> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_142> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_143> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_144> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_145> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_146> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_147> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_148> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_149> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_150> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_151> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_152> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_153> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_154> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_155> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_156> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_157> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_158> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_159> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_224> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_225> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_226> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_227> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_228> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_229> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_230> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_231> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_232> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_233> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_234> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_235> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_236> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_237> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_238> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_239> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_240> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_241> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_242> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_243> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_244> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_245> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_246> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_247> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_248> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_249> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_250> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_251> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_252> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_253> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_254> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_255> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_192> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_193> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_194> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_195> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_196> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_197> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_198> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_199> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_200> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_201> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_202> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_203> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_204> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_205> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_206> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_207> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_208> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_209> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_210> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_211> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_212> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_213> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_214> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_215> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_216> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_217> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_218> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_219> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_220> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_221> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_222> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_223> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_32> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_33> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_34> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_35> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_36> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_37> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_38> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_39> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_40> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_41> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_42> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_43> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_44> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_45> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_46> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_47> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_48> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_49> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_50> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_51> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_52> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_53> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_54> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_55> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_56> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_57> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_58> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_59> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_60> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_61> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_62> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_63> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_0> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_1> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_2> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_3> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_4> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_5> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_6> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_7> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_8> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_9> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_10> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_11> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_12> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_13> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_14> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_15> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_16> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_17> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_18> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_19> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_20> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_21> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_22> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_23> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_24> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_25> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_26> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_27> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_28> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_29> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_30> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_31> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_96> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_97> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_98> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_99> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_100> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_101> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_102> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_103> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_104> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_105> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_106> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_107> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_108> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_109> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_110> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_111> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_112> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_113> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_114> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_115> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_116> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_117> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_118> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_119> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_120> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_121> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_122> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_123> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_124> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_125> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_126> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_127> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_64> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_65> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_66> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_67> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_68> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_69> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_70> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_71> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_72> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_73> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_74> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_75> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_76> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_77> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_78> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_79> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_95> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_94> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_93> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_92> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_91> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_90> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_89> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_88> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_87> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_86> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_85> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_84> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_83> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_82> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_81> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory_15_80> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_15> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_14> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_13> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_12> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_11> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_10> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_9> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_8> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_7> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_6> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_5> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_4> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_3> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_2> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_1> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_data_0> (without init value) has a constant value of 0 in block <data_memory>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <part1_without_pipeline> ...
 
 Optimizing unit <regfile> ...
+
+Optimizing unit <data_memory> ...
 
 Optimizing unit <alu> ...
 
@@ -6775,6 +6524,21 @@ INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6140> are equivalent, 
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6141> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6143> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6144> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory13> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory9> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory8> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory10> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory1> are equivalent, second RAM is removed
 WARNING:Xst:1710 - FF/Latch <RF0/regdata_15_95> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_94> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_93> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -7024,6 +6788,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_163>
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_162> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_161> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_160> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DM/read_data_15> in Unit <part1_without_pipeline> is equivalent to the following 15 FFs/Latches, which will be removed : <DM/read_data_14> <DM/read_data_13> <DM/read_data_12> <DM/read_data_11> <DM/read_data_10> <DM/read_data_9> <DM/read_data_8> <DM/read_data_7> <DM/read_data_6> <DM/read_data_5> <DM/read_data_4> <DM/read_data_3> <DM/read_data_2> <DM/read_data_1> <DM/read_data_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -7048,8 +6813,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 29
- Flip-Flops                                            : 29
+# Registers                                            : 30
+ Flip-Flops                                            : 30
 
 =========================================================================
 
@@ -7072,24 +6837,26 @@ Top Level Output File Name         : part1_without_pipeline.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 269
+# BELS                             : 272
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 16
 #      LUT2                        : 22
-#      LUT3                        : 13
+#      LUT3                        : 14
 #      LUT4                        : 51
-#      LUT5                        : 23
+#      LUT5                        : 25
 #      LUT6                        : 21
 #      MUXCY                       : 59
 #      MUXF7                       : 9
 #      MUXF8                       : 4
 #      VCC                         : 1
 #      XORCY                       : 48
-# FlipFlops/Latches                : 36
+# FlipFlops/Latches                : 37
 #      FDR                         : 29
+#      FDRE                        : 1
 #      LD                          : 7
-# RAMS                             : 2
+# RAMS                             : 3
+#      RAM16X1S                    : 1
 #      RAM64M                      : 1
 #      RAM64X1D                    : 1
 # Clock Buffers                    : 1
@@ -7107,18 +6874,18 @@ Selected Device : 6slx4csg225-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              33  out of   4800     0%  
- Number of Slice LUTs:                  153  out of   2400     6%  
-    Number used as Logic:               147  out of   2400     6%  
-    Number used as Memory:                6  out of   1200     0%  
-       Number used as RAM:                6
+ Number of Slice Registers:              34  out of   4800     0%  
+ Number of Slice LUTs:                  157  out of   2400     6%  
+    Number used as Logic:               150  out of   2400     6%  
+    Number used as Memory:                7  out of   1200     0%  
+       Number used as RAM:                7
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    157
-   Number with an unused Flip Flop:     124  out of    157    78%  
-   Number with an unused LUT:             4  out of    157     2%  
-   Number of fully used LUT-FF pairs:    29  out of    157    18%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:    161
+   Number with an unused Flip Flop:     127  out of    161    78%  
+   Number with an unused LUT:             4  out of    161     2%  
+   Number of fully used LUT-FF pairs:    30  out of    161    18%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                         209
@@ -7152,8 +6919,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 31    |
-C0/_n0034<1>(C0/_n0034<0>1:O)      | NONE(*)(C0/aluop_0)    | 7     |
+clk                                | BUFGP                  | 33    |
+C0/_n0037<1>(C0/_n0037<0>1:O)      | NONE(*)(C0/aluop_0)    | 7     |
 -----------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -7168,9 +6935,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 15.050ns (Maximum Frequency: 66.446MHz)
-   Minimum input arrival time before clock: 2.901ns
-   Maximum output required time after clock: 18.343ns
+   Minimum period: 15.817ns (Maximum Frequency: 63.224MHz)
+   Minimum input arrival time before clock: 3.833ns
+   Maximum output required time after clock: 18.416ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -7179,70 +6946,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 15.050ns (frequency: 66.446MHz)
-  Total number of paths / destination ports: 15759 / 47
+  Clock period: 15.817ns (frequency: 63.224MHz)
+  Total number of paths / destination ports: 22879 / 54
 -------------------------------------------------------------------------
-Delay:               15.050ns (Levels of Logic = 18)
+Delay:               15.817ns (Levels of Logic = 16)
   Source:            im/Mram_memory2 (RAM)
-  Destination:       pc/currPC_0 (FF)
+  Destination:       DM/read_data_15 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: im/Mram_memory2 to pc/currPC_0
+  Data Path: im/Mram_memory2 to DM/read_data_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAM64M:WCLK->DOA     97   0.910   1.858  im/Mram_memory2 (INST_0_OBUF)
+     RAM64M:WCLK->DOA     98   0.910   1.865  im/Mram_memory2 (INST_0_OBUF)
      LUT4:I3->O            1   0.205   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_41 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_4)
      MUXF7:I1->O           1   0.140   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7)
      MUXF8:I1->O           1   0.152   0.684  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_2_f8 (RF0/raddr2[3]_regdata[15][15]_wide_mux_30_OUT<0>)
      LUT3:I1->O            2   0.203   0.721  RF0/Mmux_rdata211 (rdata2_0_OBUF)
      LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
      DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result723 (ALU0/Mmux_result722)
-     LUT6:I5->O            2   0.205   0.721  ALU0/Mmux_result724 (aluout_0_OBUF)
-     LUT2:I0->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
-     LUT3:I2->O           11   0.205   0.883  RF0/Mmux_rdata111 (rdata1_0_OBUF)
-     LUT4:I3->O            1   0.205   0.000  ALU0/Mcompar_zero_lut<0> (ALU0/Mcompar_zero_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  ALU0/Mcompar_zero_cy<0> (ALU0/Mcompar_zero_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<1> (ALU0/Mcompar_zero_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<2> (ALU0/Mcompar_zero_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<3> (ALU0/Mcompar_zero_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<4> (ALU0/Mcompar_zero_cy<4>)
-     MUXCY:CI->O          18   0.213   1.050  ALU0/Mcompar_zero_cy<5> (zero_OBUF)
-     LUT4:I3->O            1   0.205   0.000  Mmux_PCIN161 (PCIN<9>)
-     FDR:D                     0.102          pc/currPC_9
+     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
+     LUT3:I2->O            4   0.205   0.788  ALU0/Mmux_result725 (aluout_0_OBUF)
+     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
+     LUT3:I2->O           11   0.205   0.882  RF0/Mmux_rdata111 (rdata1_0_OBUF)
+     MUXCY:DI->O           1   0.145   0.000  ALU0/Mmux_result1_rs_cy<0> (ALU0/Mmux_result1_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ALU0/Mmux_result1_rs_cy<1> (ALU0/Mmux_result1_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ALU0/Mmux_result1_rs_cy<2> (ALU0/Mmux_result1_rs_cy<2>)
+     XORCY:CI->O           1   0.180   0.580  ALU0/Mmux_result1_rs_xor<3> (ALU0/Mmux_result1_split<3>)
+     LUT6:I5->O            3   0.205   0.650  ALU0/Mmux_result7113 (aluout_3_OBUF)
+     RAM16X1S:A3->O        1   0.205   0.579  DM/Mram_memory16 (DM/_n0015<15>)
+     FDRE:D                    0.102          DM/read_data_15
     ----------------------------------------
-    Total                     15.050ns (6.439ns logic, 8.611ns route)
-                                       (42.8% logic, 57.2% route)
+    Total                     15.817ns (6.375ns logic, 9.442ns route)
+                                       (40.3% logic, 59.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 29 / 29
+  Total number of paths / destination ports: 31 / 31
 -------------------------------------------------------------------------
-Offset:              2.901ns (Levels of Logic = 1)
+Offset:              3.833ns (Levels of Logic = 2)
   Source:            rst (PAD)
-  Destination:       pc/currPC_0 (FF)
+  Destination:       DM/Mram_memory16 (RAM)
   Destination Clock: clk rising
 
-  Data Path: rst to pc/currPC_0
+  Data Path: rst to DM/Mram_memory16
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            29   1.222   1.249  rst_IBUF (rst_IBUF)
-     FDR:R                     0.430          pc/currPC_0
+     IBUF:I->O            31   1.222   1.525  rst_IBUF (rst_IBUF)
+     LUT5:I1->O            1   0.203   0.579  DM/Mmux_BUS_000111 (DM/BUS_0001)
+     RAM16X1S:WE               0.304          DM/Mram_memory16
     ----------------------------------------
-    Total                      2.901ns (1.652ns logic, 1.249ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                      3.833ns (1.729ns logic, 2.104ns route)
+                                       (45.1% logic, 54.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'C0/_n0034<1>'
-  Total number of paths / destination ports: 671 / 26
+Timing constraint: Default OFFSET OUT AFTER for Clock 'C0/_n0037<1>'
+  Total number of paths / destination ports: 696 / 26
 -------------------------------------------------------------------------
-Offset:              16.934ns (Levels of Logic = 17)
+Offset:              17.000ns (Levels of Logic = 17)
   Source:            C0/wen (LATCH)
   Destination:       PCSrc (PAD)
-  Source Clock:      C0/_n0034<1> falling
+  Source Clock:      C0/_n0037<1> falling
 
   Data Path: C0/wen to PCSrc
                                 Gate     Net
@@ -7253,9 +7019,9 @@ Offset:              16.934ns (Levels of Logic = 17)
      LUT3:I0->O            2   0.205   0.721  RF0/Mmux_rdata211 (rdata2_0_OBUF)
      LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
      DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result723 (ALU0/Mmux_result722)
-     LUT6:I5->O            2   0.205   0.721  ALU0/Mmux_result724 (aluout_0_OBUF)
-     LUT2:I0->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
+     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
+     LUT3:I2->O            4   0.205   0.788  ALU0/Mmux_result725 (aluout_0_OBUF)
+     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
      LUT3:I2->O           11   0.205   0.883  RF0/Mmux_rdata111 (rdata1_0_OBUF)
      LUT4:I3->O            1   0.205   0.000  ALU0/Mcompar_zero_lut<0> (ALU0/Mcompar_zero_lut<0>)
      MUXCY:S->O            1   0.172   0.000  ALU0/Mcompar_zero_cy<0> (ALU0/Mcompar_zero_cy<0>)
@@ -7267,14 +7033,14 @@ Offset:              16.934ns (Levels of Logic = 17)
      LUT5:I1->O            1   0.203   0.579  PCSrc1 (PCSrc_OBUF)
      OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
     ----------------------------------------
-    Total                     16.934ns (8.202ns logic, 8.732ns route)
-                                       (48.4% logic, 51.6% route)
+    Total                     17.000ns (8.202ns logic, 8.798ns route)
+                                       (48.2% logic, 51.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 18514 / 125
+  Total number of paths / destination ports: 18771 / 141
 -------------------------------------------------------------------------
-Offset:              18.343ns (Levels of Logic = 19)
+Offset:              18.416ns (Levels of Logic = 19)
   Source:            im/Mram_memory2 (RAM)
   Destination:       PCSrc (PAD)
   Source Clock:      clk rising
@@ -7283,16 +7049,16 @@ Offset:              18.343ns (Levels of Logic = 19)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAM64M:WCLK->DOA     97   0.910   1.858  im/Mram_memory2 (INST_0_OBUF)
+     RAM64M:WCLK->DOA     98   0.910   1.865  im/Mram_memory2 (INST_0_OBUF)
      LUT4:I3->O            1   0.205   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_41 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_4)
      MUXF7:I1->O           1   0.140   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7)
      MUXF8:I1->O           1   0.152   0.684  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_2_f8 (RF0/raddr2[3]_regdata[15][15]_wide_mux_30_OUT<0>)
      LUT3:I1->O            2   0.203   0.721  RF0/Mmux_rdata211 (rdata2_0_OBUF)
      LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
      DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result723 (ALU0/Mmux_result722)
-     LUT6:I5->O            2   0.205   0.721  ALU0/Mmux_result724 (aluout_0_OBUF)
-     LUT2:I0->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
+     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
+     LUT3:I2->O            4   0.205   0.788  ALU0/Mmux_result725 (aluout_0_OBUF)
+     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
      LUT3:I2->O           11   0.205   0.883  RF0/Mmux_rdata111 (rdata1_0_OBUF)
      LUT4:I3->O            1   0.205   0.000  ALU0/Mcompar_zero_lut<0> (ALU0/Mcompar_zero_lut<0>)
      MUXCY:S->O            1   0.172   0.000  ALU0/Mcompar_zero_cy<0> (ALU0/Mcompar_zero_cy<0>)
@@ -7304,20 +7070,20 @@ Offset:              18.343ns (Levels of Logic = 19)
      LUT5:I1->O            1   0.203   0.579  PCSrc1 (PCSrc_OBUF)
      OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
     ----------------------------------------
-    Total                     18.343ns (8.906ns logic, 9.437ns route)
-                                       (48.6% logic, 51.4% route)
+    Total                     18.416ns (8.906ns logic, 9.510ns route)
+                                       (48.4% logic, 51.6% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock C0/_n0034<1>
+Clock to Setup on destination clock C0/_n0037<1>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.267|         |
+clk            |         |         |    3.281|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -7325,21 +7091,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-C0/_n0034<1>   |         |   13.641|         |         |
-clk            |   15.050|         |         |         |
+C0/_n0037<1>   |         |   14.401|         |         |
+clk            |   15.817|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 39.00 secs
-Total CPU time to Xst completion: 38.90 secs
+Total REAL time to Xst completion: 38.00 secs
+Total CPU time to Xst completion: 37.31 secs
  
 --> 
 
-Total memory usage is 501424 kilobytes
+Total memory usage is 501488 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  549 (   0 filtered)
-Number of infos    : 6145 (   0 filtered)
+Number of warnings :  280 (   0 filtered)
+Number of infos    : 6162 (   0 filtered)
 

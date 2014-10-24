@@ -25,22 +25,22 @@ assign data_out = memory[addr_r];
         begin
 	        addr_r <=0;
     	    case(fileid)
-  	        0: fin = $fopen("imem_test0.txt","r");
-          	1: fin = $fopen("imem_test1.txt","r");
-  	        2: fin = $fopen("imem_test2.txt","r");
-          	3: fin = $fopen("imem_test3.txt","r");
-  	        4: fin = $fopen("imem_test4.txt","r");
-          	5: fin = $fopen("imem_test5.txt","r");
-  	        6: fin = $fopen("imem_test6.txt","r");
-          	7: fin = $fopen("imem_test7.txt","r");
-  	        8: fin = $fopen("dmem_test0.txt","r");
-          	9: fin = $fopen("dmem_test1.txt","r");
-  	        10: fin = $fopen("dmem_test2.txt","r");
-          	11: fin = $fopen("dmem_test3.txt","r");
-  	        12: fin = $fopen("dmem_test4.txt","r");
-          	13: fin = $fopen("dmem_test5.txt","r");
-  	        14: fin = $fopen("dmem_test6.txt","r");
-  	        15: fin = $fopen("dmem_test7.txt","r");
+  	        0: fin = $fopen("im_test.txt","r");
+//          	1: fin = $fopen("imem_test1.txt","r");
+//  	        2: fin = $fopen("imem_test2.txt","r");
+//          	3: fin = $fopen("imem_test3.txt","r");
+//  	        4: fin = $fopen("imem_test4.txt","r");
+//          	5: fin = $fopen("imem_test5.txt","r");
+//  	        6: fin = $fopen("imem_test6.txt","r");
+//          	7: fin = $fopen("imem_test7.txt","r");
+//  	        8: fin = $fopen("dmem_test0.txt","r");
+//          	9: fin = $fopen("dmem_test1.txt","r");
+//  	        10: fin = $fopen("dmem_test2.txt","r");
+//          	11: fin = $fopen("dmem_test3.txt","r");
+//  	        12: fin = $fopen("dmem_test4.txt","r");
+//          	13: fin = $fopen("dmem_test5.txt","r");
+//  	        14: fin = $fopen("dmem_test6.txt","r");
+//  	        15: fin = $fopen("dmem_test7.txt","r");
   	      endcase
 	        $write("Opening Fileid %d\n", fileid);
 

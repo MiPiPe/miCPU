@@ -31,7 +31,6 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="dmem_test0.txt" xil_pn:type="FILE_USERDOC"/>
     <file xil_pn:name="EXE_WB_stage.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
@@ -40,7 +39,6 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="imem_test0.txt" xil_pn:type="FILE_USERDOC"/>
     <file xil_pn:name="memory.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
@@ -69,6 +67,8 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
+    <file xil_pn:name="dm_test.txt" xil_pn:type="FILE_USERDOC"/>
+    <file xil_pn:name="im_test.txt" xil_pn:type="FILE_USERDOC"/>
   </files>
 
   <properties>

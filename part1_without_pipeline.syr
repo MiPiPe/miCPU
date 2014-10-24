@@ -1,16 +1,16 @@
-Release 14.5 - xst P.58f (nt64)
+Release 14.4 - xst P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: part1_without_pipeline.prj
 
@@ -105,30 +105,30 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\CZ3001\sign_extend.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\sign_extend.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <sign_extend>.
-Analyzing Verilog file "C:\CZ3001\regfile.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\regfile.v" into library work
 Parsing verilog file "define.v" included at line 2.
 Parsing module <regfile>.
-Analyzing Verilog file "C:\CZ3001\PC.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\PC.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <PC1>.
-Analyzing Verilog file "C:\CZ3001\memory.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <memory>.
-Analyzing Verilog file "C:\CZ3001\data_memory.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <data_memory>.
-Analyzing Verilog file "C:\CZ3001\control.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\control.v" into library work
 Parsing verilog file "define.v" included at line 3.
 Parsing module <control>.
-Analyzing Verilog file "C:\CZ3001\alu.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\alu.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <alu>.
-Analyzing Verilog file "C:\CZ3001\adder.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\adder.v" into library work
 Parsing module <adder>.
-Analyzing Verilog file "C:\CZ3001\part1_without_pipeline.v" into library work
+Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" into library work
 Parsing verilog file "define.v" included at line 2.
 Parsing module <part1_without_pipeline>.
 
@@ -141,36 +141,36 @@ Elaborating module <part1_without_pipeline>.
 Elaborating module <PC1>.
 
 Elaborating module <memory>.
-"C:\CZ3001\memory.v" Line 45. $write Opening Fileid 0\n
-WARNING:HDLCompiler:816 - "C:\CZ3001\memory.v" Line 47: System function call feof not supported
-WARNING:HDLCompiler:817 - "C:\CZ3001\memory.v" Line 61: System task fclose ignored for synthesis
+"D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 45. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 47: System function call feof not supported
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 61: System task fclose ignored for synthesis
 
 Elaborating module <adder>.
-WARNING:HDLCompiler:413 - "C:\CZ3001\part1_without_pipeline.v" Line 47: Result of 16-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:91 - "C:\CZ3001\part1_without_pipeline.v" Line 51: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 47: Result of 16-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 51: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <sign_extend>.
 
 Elaborating module <control>.
 
 Elaborating module <regfile>.
-WARNING:HDLCompiler:189 - "C:\CZ3001\part1_without_pipeline.v" Line 61: Size mismatch in connection of port <wdata>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 61: Size mismatch in connection of port <wdata>. Formal port size is 16-bit while actual signal size is 1-bit.
 
 Elaborating module <alu>.
 
 Elaborating module <data_memory>.
-WARNING:HDLCompiler:816 - "C:\CZ3001\data_memory.v" Line 33: System function call feof not supported
-WARNING:HDLCompiler:817 - "C:\CZ3001\data_memory.v" Line 47: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\CZ3001\data_memory.v" Line 57: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\CZ3001\data_memory.v" Line 58: System task fclose ignored for synthesis
-WARNING:HDLCompiler:189 - "C:\CZ3001\part1_without_pipeline.v" Line 65: Size mismatch in connection of port <addr>. Formal port size is 4-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:816 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 33: System function call feof not supported
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 47: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 57: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 58: System task fclose ignored for synthesis
+WARNING:HDLCompiler:189 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 65: Size mismatch in connection of port <addr>. Formal port size is 4-bit while actual signal size is 16-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <part1_without_pipeline>.
-    Related source file is "C:\CZ3001\part1_without_pipeline.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v".
 WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <wdata_mem> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
@@ -178,14 +178,14 @@ WARNING:Xst:653 - Signal <wdata_mem> is used but never assigned. This sourceless
 Unit <part1_without_pipeline> synthesized.
 
 Synthesizing Unit <PC1>.
-    Related source file is "C:\CZ3001\PC.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\PC.v".
     Found 16-bit register for signal <currPC>.
     Summary:
 	inferred  16 D-type flip-flop(s).
 Unit <PC1> synthesized.
 
 Synthesizing Unit <memory>.
-    Related source file is "C:\CZ3001\memory.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v".
 WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 65536x16-bit dual-port RAM <Mram_memory> for signal <memory>.
     Found 16-bit register for signal <addr_r>.
@@ -195,20 +195,20 @@ WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and 
 Unit <memory> synthesized.
 
 Synthesizing Unit <adder>.
-    Related source file is "C:\CZ3001\adder.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\adder.v".
     Found 16-bit adder for signal <out> created at line 6.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <adder> synthesized.
 
 Synthesizing Unit <sign_extend>.
-    Related source file is "C:\CZ3001\sign_extend.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\sign_extend.v".
     Summary:
 	no macro.
 Unit <sign_extend> synthesized.
 
 Synthesizing Unit <control>.
-    Related source file is "C:\CZ3001\control.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\control.v".
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -219,7 +219,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <wen>. Latches may be generated f
 Unit <control> synthesized.
 
 Synthesizing Unit <regfile>.
-    Related source file is "C:\CZ3001\regfile.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\regfile.v".
     Found 256-bit register for signal <n0041>.
     Found 16-bit 16-to-1 multiplexer for signal <waddr[3]_regdata[15][15]_wide_mux_3_OUT> created at line 47.
     Found 16-bit 16-to-1 multiplexer for signal <raddr1[3]_regdata[15][15]_wide_mux_26_OUT> created at line 50.
@@ -233,7 +233,7 @@ Synthesizing Unit <regfile>.
 Unit <regfile> synthesized.
 
 Synthesizing Unit <alu>.
-    Related source file is "C:\CZ3001\alu.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\alu.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 23.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 22.
     Found 16-bit shifter logical left for signal <a[15]_b[15]_shift_left_4_OUT> created at line 26
@@ -251,7 +251,7 @@ Synthesizing Unit <alu>.
 Unit <alu> synthesized.
 
 Synthesizing Unit <data_memory>.
-    Related source file is "C:\CZ3001\data_memory.v".
+    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v".
     Found 256-bit register for signal <n0028[255:0]>.
     Found 16-bit register for signal <read_data>.
     Found 16-bit 16-to-1 multiplexer for signal <addr[3]_memory[15][15]_wide_mux_1_OUT> created at line 52.
@@ -7126,7 +7126,7 @@ IO Utilization:
     IOB Flip Flops/Latches:               3
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
  Number of DSP48A1s:                      1  out of      8    12%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -7249,7 +7249,7 @@ Offset:              16.934ns (Levels of Logic = 17)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               6   0.498   0.992  C0/wen (C0/wen)
-     LUT4:I0->O            2   0.203   0.845  RF0/wen_GND_11_o_AND_34_o51 (RF0/wen_GND_11_o_AND_34_o)
+     LUT4:I0->O            2   0.203   0.845  RF0/wen_GND_11_o_AND_36_o51 (RF0/wen_GND_11_o_AND_36_o)
      LUT3:I0->O            2   0.205   0.721  RF0/Mmux_rdata211 (rdata2_0_OBUF)
      LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
      DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
@@ -7332,12 +7332,12 @@ clk            |   15.050|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 46.00 secs
-Total CPU time to Xst completion: 45.74 secs
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 38.90 secs
  
 --> 
 
-Total memory usage is 517420 kilobytes
+Total memory usage is 501424 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  549 (   0 filtered)

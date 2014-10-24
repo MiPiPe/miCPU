@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 `include "define.v"
 
-module part1_without_pipeline(clk, rst, fileid, rdata1, rdata2, raddr2, alu_in2, aluout, INST, aluop, imm_in, imm_extended, 
-	branch_adder_out, rdata_mem, wdata_mem, mem_write, mem_to_reg, branch, zero, PCSrc, RegDst, ALUSrc, PCOUT, nPC);
+module part1_without_pipeline(clk, rst, fileid, rdata1, rdata2, raddr2, alu_in2, aluout, INST, aluop, imm_extended, 
+	branch_adder_out, rdata_mem, mem_write, mem_to_reg, branch, zero, PCSrc, RegDst, ALUSrc, PCOUT, nPC);
 
 input clk;
 											
@@ -16,10 +16,10 @@ output [`DSIZE-1:0] alu_in2;
 output [`DSIZE-1:0] aluout;
 output [`DSIZE-1:0] INST;
 output [2:0] aluop;
-output [`DSIZE-1:0] imm_in, imm_extended;
+output [`DSIZE-1:0] imm_extended;
 output [`ISIZE-1:0] branch_adder_out;
 //Data memory
-output [`DSIZE-1:0] rdata_mem, wdata_mem;
+output [`DSIZE-1:0] rdata_mem;
 output mem_write, mem_to_reg;
 //Program counter
 output branch, zero, PCSrc;
@@ -62,7 +62,7 @@ regfile  RF0 ( .clk(clk), .rst(rst), .wen(wen), .raddr1(INST[7:4]), .raddr2(INST
 
 alu ALU0 ( .a(rdata1), .b(alu_in2), .op(aluop), .result(aluout), .zero(zero));
 
-data_memory DM (.clk(clk), .rst(rst), .wen(mem_write), .ren(mem_to_reg), .addr(aluout), .write_data(wdata_mem), .read_data(rdata_mem));
+data_memory DM (.clk(clk), .rst(rst), .wen(mem_write), .ren(mem_to_reg), .addr(aluout), .write_data(rdata2), .read_data(rdata_mem));
 
 endmodule
 

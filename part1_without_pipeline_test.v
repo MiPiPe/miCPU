@@ -15,11 +15,9 @@ module part1_without_pipeline_test;
 	wire [15:0] aluout;
 	wire [15:0] INST;
 	wire [2:0] aluop;
-	wire [15:0] imm_in;
 	wire [15:0] imm_extended;
 	wire [15:0] branch_adder_out;
 	wire [15:0] rdata_mem;
-	wire [15:0] wdata_mem;
 	wire mem_write;
 	wire mem_to_reg;
 	wire branch;
@@ -42,11 +40,9 @@ module part1_without_pipeline_test;
 		.aluout(aluout), 
 		.INST(INST), 
 		.aluop(aluop), 
-		.imm_in(imm_in), 
 		.imm_extended(imm_extended), 
 		.branch_adder_out(branch_adder_out), 
 		.rdata_mem(rdata_mem), 
-		.wdata_mem(wdata_mem), 
 		.mem_write(mem_write), 
 		.mem_to_reg(mem_to_reg), 
 		.branch(branch), 

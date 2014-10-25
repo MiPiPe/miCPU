@@ -5,6 +5,6 @@ module sign_extend(
 	output [`DSIZE-1:0] imm_sign_extend
 );
 
-assign imm_sign_extend = {{12{imm[3]}}, imm[3:0]};
+assign imm_sign_extend = {{12{0}}, imm[3:0]};
 
 endmodule

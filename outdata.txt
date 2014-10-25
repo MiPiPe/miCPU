@@ -1,4 +1,36 @@
-read: 0002 1
-read: 0002 1
-write: 0000 2
-read: 0000 2
+
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0000 to 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0000 to 0002
+read: 0000 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0000 to 0002
+read: 0000 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0000 to 0002
+read: 0000 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0000 to 0002
+read: 0000 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0005 to 0002
+read: 0005 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0005 to 0002
+read: 0005 from 0002
+read: 0002 from 0001
+read: 0002 from 0001
+write: 0005 to 0002
+read: 0005 from 0002
+write: 0005 to 0002
+read: 0005 from 0002
+write: 0005 to 0002
+read: 0005 from 0002

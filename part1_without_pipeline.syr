@@ -1,16 +1,16 @@
-Release 14.4 - xst P.49d (nt64)
+Release 14.5 - xst P.58f (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: part1_without_pipeline.prj
 
@@ -105,30 +105,30 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\sign_extend.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\sign_extend.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <sign_extend>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\regfile.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\regfile.v" into library work
 Parsing verilog file "define.v" included at line 2.
 Parsing module <regfile>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\PC.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\PC.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <PC1>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <memory>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <data_memory>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\control.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\control.v" into library work
 Parsing verilog file "define.v" included at line 3.
 Parsing module <control>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\alu.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\alu.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <alu>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\adder.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\adder.v" into library work
 Parsing module <adder>.
-Analyzing Verilog file "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" into library work
 Parsing verilog file "define.v" included at line 2.
 Parsing module <part1_without_pipeline>.
 
@@ -141,52 +141,49 @@ Elaborating module <part1_without_pipeline>.
 Elaborating module <PC1>.
 
 Elaborating module <memory>.
-"D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 45. $write Opening Fileid 0\n
-WARNING:HDLCompiler:816 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 47: System function call feof not supported
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v" Line 61: System task fclose ignored for synthesis
+"\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" Line 45. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" Line 47: System function call feof not supported
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" Line 61: System task fclose ignored for synthesis
 
 Elaborating module <adder>.
-WARNING:HDLCompiler:413 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 47: Result of 16-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:91 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 51: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" Line 54: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <sign_extend>.
 
 Elaborating module <control>.
 
 Elaborating module <regfile>.
-WARNING:HDLCompiler:189 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 61: Size mismatch in connection of port <wdata>. Formal port size is 16-bit while actual signal size is 1-bit.
 
 Elaborating module <alu>.
 
 Elaborating module <data_memory>.
-WARNING:HDLCompiler:816 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 33: System function call feof not supported
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 50: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 58: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 59: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 65: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v" Line 66: System task fclose ignored for synthesis
-WARNING:HDLCompiler:189 - "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v" Line 65: Size mismatch in connection of port <addr>. Formal port size is 4-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:816 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 33: System function call feof not supported
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 50: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 58: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 59: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 65: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 66: System task fclose ignored for synthesis
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <part1_without_pipeline>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\part1_without_pipeline.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v".
 WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	inferred   4 Multiplexer(s).
 Unit <part1_without_pipeline> synthesized.
 
 Synthesizing Unit <PC1>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\PC.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\PC.v".
     Found 16-bit register for signal <currPC>.
     Summary:
 	inferred  16 D-type flip-flop(s).
 Unit <PC1> synthesized.
 
 Synthesizing Unit <memory>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\memory.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v".
 WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 65536x16-bit dual-port RAM <Mram_memory> for signal <memory>.
     Found 16-bit register for signal <addr_r>.
@@ -196,20 +193,20 @@ WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and 
 Unit <memory> synthesized.
 
 Synthesizing Unit <adder>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\adder.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\adder.v".
     Found 16-bit adder for signal <out> created at line 6.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <adder> synthesized.
 
 Synthesizing Unit <sign_extend>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\sign_extend.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\sign_extend.v".
     Summary:
 	no macro.
 Unit <sign_extend> synthesized.
 
 Synthesizing Unit <control>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\control.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\control.v".
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <aluop<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -220,7 +217,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <wen>. Latches may be generated f
 Unit <control> synthesized.
 
 Synthesizing Unit <regfile>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\regfile.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\regfile.v".
     Found 256-bit register for signal <n0041>.
     Found 16-bit 16-to-1 multiplexer for signal <waddr[3]_regdata[15][15]_wide_mux_3_OUT> created at line 47.
     Found 16-bit 16-to-1 multiplexer for signal <raddr1[3]_regdata[15][15]_wide_mux_26_OUT> created at line 50.
@@ -234,7 +231,7 @@ Synthesizing Unit <regfile>.
 Unit <regfile> synthesized.
 
 Synthesizing Unit <alu>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\alu.v".
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\alu.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 23.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 22.
     Found 16-bit shifter logical left for signal <a[15]_b[15]_shift_left_4_OUT> created at line 26
@@ -252,10 +249,9 @@ Synthesizing Unit <alu>.
 Unit <alu> synthesized.
 
 Synthesizing Unit <data_memory>.
-    Related source file is "D:\NTU\CZ3001 Advanced Computer Architecture\Project\miCPU\data_memory.v".
-WARNING:Xst:3015 - Contents of array <memory> may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
-    Found 16x16-bit single-port RAM <Mram_memory> for signal <memory>.
-    Found 16-bit register for signal <read_data>.
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v".
+    Found 65536x16-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 16-bit register for signal <addr_r>.
     Summary:
 	inferred   1 RAM(s).
 	inferred  16 D-type flip-flop(s).
@@ -267,8 +263,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 16x16-bit single-port RAM                             : 1
- 65536x16-bit dual-port RAM                            : 1
+ 65536x16-bit dual-port RAM                            : 2
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 3
@@ -303,17 +298,21 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 
 Synthesizing (advanced) Unit <data_memory>.
-INFO:Xst:3231 - The small RAM <Mram_memory> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3230 - The RAM description <Mram_memory> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     aspect ratio   | 65536-word x 16-bit                 |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to internal node          | high     |
     |     addrA          | connected to signal <addr>          |          |
     |     diA            | connected to signal <write_data>    |          |
-    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 65536-word x 16-bit                 |          |
+    |     addrB          | connected to signal <addr_r>        |          |
+    |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <data_memory> synthesized (advanced).
 
@@ -342,8 +341,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 16x16-bit single-port distributed RAM                 : 1
- 65536x16-bit dual-port distributed RAM                : 1
+ 65536x16-bit dual-port distributed RAM                : 2
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 3
@@ -6523,7 +6521,13 @@ INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6140> are equivalent, 
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6141> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6143> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <im/Mram_memory5122>, <im/Mram_memory6144> are equivalent, second RAM is removed
-WARNING:Xst:1710 - FF/Latch <RF0/regdata_15_95> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RF0/regdata_15_117> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_116> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_115> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_114> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_113> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_112> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_95> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_94> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_93> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_92> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6535,25 +6539,14 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_87> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_86> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_85> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_84> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_83> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_82> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_81> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_80> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_79> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_78> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_77> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_76> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_75> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_74> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_73> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_72> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_71> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_70> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_69> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_68> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_67> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_66> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_65> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_135> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_134> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_133> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_132> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_131> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_130> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_129> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_128> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_127> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_126> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_125> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6564,27 +6557,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_121>
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_120> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_119> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_118> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_117> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_116> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_115> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_114> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_113> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_112> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_111> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_110> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_109> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_108> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_107> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_106> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_105> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_104> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_103> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_102> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_101> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_100> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_99> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_98> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_97> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_49> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_48> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_31> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_30> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_29> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6601,21 +6575,10 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_19> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_18> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_17> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_16> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_15> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_14> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_13> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_12> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_11> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_10> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_9> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_8> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_7> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_6> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_5> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_4> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_3> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_2> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_1> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_83> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_82> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_81> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_80> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_63> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_62> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_61> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6630,54 +6593,24 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_53> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_52> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_51> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_50> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_49> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_48> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_47> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_46> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_45> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_44> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_43> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_42> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_41> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_40> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_39> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_38> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_37> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_36> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_35> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_34> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_33> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_237> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_236> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_235> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_234> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_233> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_232> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_231> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_230> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_229> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_228> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_227> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_226> (without init value) has a constant value of 1 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_225> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_224> (without init value) has a constant value of 1 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_223> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_222> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_221> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_220> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_219> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_218> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_217> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_216> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_215> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_214> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_213> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_212> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_211> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_210> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_209> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_207> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_206> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_205> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_204> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_203> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_202> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_201> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_200> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_199> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_198> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_197> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_196> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_195> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_194> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_193> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_255> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_254> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_253> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6696,72 +6629,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_241>
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_240> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_239> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_238> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_237> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_236> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_235> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_234> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_233> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_232> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_231> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_230> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_229> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_228> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_227> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_226> (without init value) has a constant value of 1 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_225> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_159> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_158> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_157> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_156> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_155> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_154> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_153> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_152> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_151> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_150> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_149> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_148> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_147> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_146> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_145> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_143> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_142> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_141> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_140> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_139> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_138> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_137> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_136> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_135> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_134> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_133> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_132> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_131> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_130> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_129> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_128> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_192> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_191> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_190> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_189> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_188> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_187> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_186> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_185> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_184> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_183> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_182> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_181> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_180> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_179> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_178> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_177> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_175> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_174> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_173> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_172> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_171> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_170> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_169> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_168> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_167> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
@@ -6772,337 +6639,35 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_163>
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_162> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_161> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_160> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_143> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_142> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_141> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_140> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_139> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_138> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_137> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_136> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_203> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_202> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_201> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_200> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_199> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_198> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_197> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_196> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_195> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_194> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_193> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_192> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_175> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_174> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_173> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_172> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_171> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RF0/regdata_15_170> (without init value) has a constant value of 0 in block <part1_without_pipeline>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory15> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory14> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory13> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory12> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory11> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory9> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory8> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory10> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory7> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory6> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory5> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory4> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <DM/Mram_memory16>, <DM/Mram_memory2> are equivalent, second RAM is removed
-Found area constraint ratio of 100 (+ 5) on block part1_without_pipeline, actual ratio is 11.
-INFO:Xst:2260 - The FF/Latch <DM/read_data_15> in Unit <part1_without_pipeline> is equivalent to the following 13 FFs/Latches : <DM/read_data_14> <DM/read_data_13> <DM/read_data_12> <DM/read_data_11> <DM/read_data_10> <DM/read_data_9> <DM/read_data_8> <DM/read_data_7> <DM/read_data_6> <DM/read_data_5> <DM/read_data_4> <DM/read_data_3> <DM/read_data_1> 
-WARNING:Xst:2677 - Node <im/addr_r_6> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_7> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_8> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_9> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_10> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_11> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_12> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_13> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_14> of sequential type is unconnected in block <part1_without_pipeline>.
-WARNING:Xst:2677 - Node <im/addr_r_15> of sequential type is unconnected in block <part1_without_pipeline>.
-Latch C0/aluop_2 has been replicated 1 time(s) to handle iob=true attribute.
-Latch C0/aluop_1 has been replicated 1 time(s) to handle iob=true attribute.
-Latch C0/aluop_0 has been replicated 1 time(s) to handle iob=true attribute.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 45
- Flip-Flops                                            : 45
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : part1_without_pipeline.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 272
-#      GND                         : 1
-#      INV                         : 1
-#      LUT1                        : 16
-#      LUT2                        : 22
-#      LUT3                        : 14
-#      LUT4                        : 51
-#      LUT5                        : 25
-#      LUT6                        : 21
-#      MUXCY                       : 59
-#      MUXF7                       : 9
-#      MUXF8                       : 4
-#      VCC                         : 1
-#      XORCY                       : 48
-# FlipFlops/Latches                : 52
-#      FDR                         : 29
-#      FDRE                        : 16
-#      LD                          : 7
-# RAMS                             : 5
-#      RAM16X1S                    : 3
-#      RAM64M                      : 1
-#      RAM64X1D                    : 1
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 175
-#      IBUF                        : 1
-#      OBUF                        : 174
-# DSPs                             : 1
-#      DSP48A1                     : 1
-
-Device utilization summary:
----------------------------
-
-Selected Device : 6slx4csg225-3 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:              49  out of   4800     1%  
- Number of Slice LUTs:                  159  out of   2400     6%  
-    Number used as Logic:               150  out of   2400     6%  
-    Number used as Memory:                9  out of   1200     0%  
-       Number used as RAM:                9
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    172
-   Number with an unused Flip Flop:     123  out of    172    71%  
-   Number with an unused LUT:            13  out of    172     7%  
-   Number of fully used LUT-FF pairs:    36  out of    172    20%  
-   Number of unique control sets:         3
-
-IO Utilization: 
- Number of IOs:                         177
- Number of bonded IOBs:                 176  out of    132   133% (*) 
-    IOB Flip Flops/Latches:               3
-
-Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
- Number of DSP48A1s:                      1  out of      8    12%  
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 50    |
-C0/_n0037<1>(C0/_n0037<0>1:O)      | NONE(*)(C0/aluop_0)    | 7     |
------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: 16.470ns (Maximum Frequency: 60.715MHz)
-   Minimum input arrival time before clock: 4.117ns
-   Maximum output required time after clock: 18.569ns
-   Maximum combinational path delay: No path found
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 16.470ns (frequency: 60.715MHz)
-  Total number of paths / destination ports: 81283 / 96
--------------------------------------------------------------------------
-Delay:               16.470ns (Levels of Logic = 16)
-  Source:            im/Mram_memory2 (RAM)
-  Destination:       DM/read_data_15 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: im/Mram_memory2 to DM/read_data_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAM64M:WCLK->DOA     98   0.910   1.865  im/Mram_memory2 (INST_0_OBUF)
-     LUT4:I3->O            1   0.205   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_41 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_4)
-     MUXF7:I1->O           1   0.140   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7)
-     MUXF8:I1->O           1   0.152   0.684  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_2_f8 (RF0/raddr2[3]_regdata[15][15]_wide_mux_30_OUT<0>)
-     LUT3:I1->O            3   0.203   0.755  RF0/Mmux_rdata211 (rdata2_0_OBUF)
-     LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
-     DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
-     LUT3:I2->O            8   0.205   0.907  ALU0/Mmux_result725 (aluout_0_OBUF)
-     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
-     LUT3:I2->O           11   0.205   0.882  RF0/Mmux_rdata111 (rdata1_0_OBUF)
-     MUXCY:DI->O           1   0.145   0.000  ALU0/Mmux_result1_rs_cy<0> (ALU0/Mmux_result1_rs_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mmux_result1_rs_cy<1> (ALU0/Mmux_result1_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mmux_result1_rs_cy<2> (ALU0/Mmux_result1_rs_cy<2>)
-     XORCY:CI->O           1   0.180   0.580  ALU0/Mmux_result1_rs_xor<3> (ALU0/Mmux_result1_split<3>)
-     LUT6:I5->O            7   0.205   0.773  ALU0/Mmux_result7113 (aluout_3_OBUF)
-     RAM16X1S:A3->O       14   0.205   0.957  DM/Mram_memory16 (DM/_n0015<15>)
-     FDRE:D                    0.102          DM/read_data_15
-    ----------------------------------------
-    Total                     16.470ns (6.375ns logic, 10.095ns route)
-                                       (38.7% logic, 61.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 48 / 48
--------------------------------------------------------------------------
-Offset:              4.117ns (Levels of Logic = 2)
-  Source:            rst (PAD)
-  Destination:       DM/Mram_memory16 (RAM)
-  Destination Clock: clk rising
-
-  Data Path: rst to DM/Mram_memory16
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            46   1.222   1.738  rst_IBUF (rst_IBUF)
-     LUT5:I1->O            3   0.203   0.650  DM/Mmux_BUS_000111 (DM/BUS_0001)
-     RAM16X1S:WE               0.304          DM/Mram_memory1
-    ----------------------------------------
-    Total                      4.117ns (1.729ns logic, 2.388ns route)
-                                       (42.0% logic, 58.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'C0/_n0037<1>'
-  Total number of paths / destination ports: 696 / 26
--------------------------------------------------------------------------
-Offset:              17.153ns (Levels of Logic = 17)
-  Source:            C0/wen (LATCH)
-  Destination:       PCSrc (PAD)
-  Source Clock:      C0/_n0037<1> falling
-
-  Data Path: C0/wen to PCSrc
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               6   0.498   0.992  C0/wen (C0/wen)
-     LUT4:I0->O            2   0.203   0.845  RF0/wen_GND_11_o_AND_36_o51 (RF0/wen_GND_11_o_AND_36_o)
-     LUT3:I0->O            3   0.205   0.755  RF0/Mmux_rdata211 (rdata2_0_OBUF)
-     LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
-     DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
-     LUT3:I2->O            8   0.205   0.907  ALU0/Mmux_result725 (aluout_0_OBUF)
-     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
-     LUT3:I2->O           11   0.205   0.883  RF0/Mmux_rdata111 (rdata1_0_OBUF)
-     LUT4:I3->O            1   0.205   0.000  ALU0/Mcompar_zero_lut<0> (ALU0/Mcompar_zero_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  ALU0/Mcompar_zero_cy<0> (ALU0/Mcompar_zero_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<1> (ALU0/Mcompar_zero_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<2> (ALU0/Mcompar_zero_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<3> (ALU0/Mcompar_zero_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<4> (ALU0/Mcompar_zero_cy<4>)
-     MUXCY:CI->O          18   0.213   1.297  ALU0/Mcompar_zero_cy<5> (zero_OBUF)
-     LUT5:I1->O            1   0.203   0.579  PCSrc1 (PCSrc_OBUF)
-     OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
-    ----------------------------------------
-    Total                     17.153ns (8.202ns logic, 8.951ns route)
-                                       (47.8% logic, 52.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 18771 / 141
--------------------------------------------------------------------------
-Offset:              18.569ns (Levels of Logic = 19)
-  Source:            im/Mram_memory2 (RAM)
-  Destination:       PCSrc (PAD)
-  Source Clock:      clk rising
-
-  Data Path: im/Mram_memory2 to PCSrc
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     RAM64M:WCLK->DOA     98   0.910   1.865  im/Mram_memory2 (INST_0_OBUF)
-     LUT4:I3->O            1   0.205   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_41 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_4)
-     MUXF7:I1->O           1   0.140   0.000  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7 (RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_3_f7)
-     MUXF8:I1->O           1   0.152   0.684  RF0/Mmux_raddr2[3]_regdata[15][15]_wide_mux_30_OUT_2_f8 (RF0/raddr2[3]_regdata[15][15]_wide_mux_30_OUT<0>)
-     LUT3:I1->O            3   0.203   0.755  RF0/Mmux_rdata211 (rdata2_0_OBUF)
-     LUT3:I1->O           11   0.203   0.882  Mmux_alu_in211 (alu_in2_0_OBUF)
-     DSP48A1:A0->M0        1   2.835   0.580  ALU0/Mmult_n0021 (ALU0/n0021<0>)
-     LUT6:I5->O            1   0.205   0.580  ALU0/Mmux_result724 (ALU0/Mmux_result723)
-     LUT3:I2->O            8   0.205   0.907  ALU0/Mmux_result725 (aluout_0_OBUF)
-     LUT3:I1->O            3   0.203   0.651  Mmux_n001811 (n0018<0>)
-     LUT3:I2->O           11   0.205   0.883  RF0/Mmux_rdata111 (rdata1_0_OBUF)
-     LUT4:I3->O            1   0.205   0.000  ALU0/Mcompar_zero_lut<0> (ALU0/Mcompar_zero_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  ALU0/Mcompar_zero_cy<0> (ALU0/Mcompar_zero_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<1> (ALU0/Mcompar_zero_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<2> (ALU0/Mcompar_zero_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<3> (ALU0/Mcompar_zero_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  ALU0/Mcompar_zero_cy<4> (ALU0/Mcompar_zero_cy<4>)
-     MUXCY:CI->O          18   0.213   1.297  ALU0/Mcompar_zero_cy<5> (zero_OBUF)
-     LUT5:I1->O            1   0.203   0.579  PCSrc1 (PCSrc_OBUF)
-     OBUF:I->O                 2.571          PCSrc_OBUF (PCSrc)
-    ----------------------------------------
-    Total                     18.569ns (8.906ns logic, 9.663ns route)
-                                       (48.0% logic, 52.0% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock C0/_n0037<1>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    3.281|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-C0/_n0037<1>   |         |   15.055|         |         |
-clk            |   16.470|         |         |         |
----------------+---------+---------+---------+---------+
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 38.00 secs
-Total CPU time to Xst completion: 37.94 secs
- 
---> 
-
-Total memory usage is 516848 kilobytes
-
-Number of errors   :    0 (   0 filtered)
-Number of warnings :  279 (   0 filtered)
-Number of infos    : 6160 (   0 filtered)
-
+Found area constraint ratio of 100 (+ 5) on block part1_without_pipeline, actual ratio is 758.
+Optimizing block <part1_without_pipeline> to meet ratio 100 (+ 5) of 600 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <part1_without_pipeline>, final ratio is 759.

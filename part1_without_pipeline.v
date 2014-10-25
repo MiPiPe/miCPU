@@ -38,6 +38,9 @@ memory im( .clk(clk), .rst(rst), .wen(1'b0), .addr(PCOUT), .data_in(16'b0), .fil
 //here we are not taking the multiplexers for initialization as initialization is done within reg file itself.
 wire wen;
 // wire [`DSIZE-1:0] imm_ID_EXE;
+wire [15:0] wdata;
+wire [3:0] raddr2;
+
 
 assign PCSrc = (branch & zero)? 1'b1: 1'b0;
 adder PCAdder(.a(PCOUT), .b(16'b1), .out(nPC));
@@ -58,7 +61,7 @@ sign_extend SE (.imm(INST[3:0]), .imm_sign_extend(imm_extended));
 
 control C0 (.inst(INST[15:12]), .wen(wen), .aluop(aluop), .branch(branch), .mem_to_reg(mem_to_reg), .mem_write(mem_write), .ALUSrc(ALUSrc), .RegDst(RegDst));
 
-regfile  RF0 ( .clk(clk), .rst(rst), .wen(wen), .raddr1(INST[7:4]), .raddr2(INST[3:0]), .waddr(INST[11:8]), .wdata(wdata), .rdata1(rdata1), .rdata2(rdata2));
+regfile  RF0 ( .clk(clk), .rst(rst), .wen(wen), .raddr1(INST[7:4]), .raddr2(raddr2), .waddr(INST[11:8]), .wdata(wdata), .rdata1(rdata1), .rdata2(rdata2));
 
 alu ALU0 ( .a(rdata1), .b(alu_in2), .op(aluop), .result(aluout), .zero(zero));
 

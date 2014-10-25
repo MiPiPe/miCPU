@@ -1,8 +1,23 @@
-//few lines in input.txt is commented you can uncomment and execute these instuctions too to check the result.
-0000 8921
-0001 9342
-0002 8352
+0000 4711
+
+
+0001 a112
+0002 4711
 0003 4711
+0004 8921
+0005 9142
+0006 0529
+0007 8602
+
+
+
+//0000 8921
+
+//0001 9142
+
+//0002 0529
+
+//0003 8602
 //0002 2f10
 //0003 3e51
 //0004 0312

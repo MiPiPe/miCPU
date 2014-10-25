@@ -5,24 +5,24 @@ module data_memory( clk, rst, wen,ren, addr, write_data, read_data);
   input clk;
   input rst;
   input wen,ren;
-  input [`ASIZE-1:0] addr;      // address input
+  input [`ISIZE-1:0] addr;      // address input
   input [`DSIZE-1:0] write_data;          // data input
-  output reg [`DSIZE-1:0] read_data;    // data output
+  output [`DSIZE-1:0] read_data;    // data output
   reg [`DSIZE-1:0] memory [0:4096*`ISIZE-1];
   reg [8*`MAX_LINE_LENGTH:0] line; /* Line of text read from file */
 
 integer fin, fout,i, c, r;
-reg [`ASIZE-1:0] t_addr;
+reg [`ISIZE-1:0] t_addr;
 reg [`DSIZE-1:0] t_data;
-reg [`ASIZE-1:0] addr_r;
-//assign data_out = (ren)? memory[addr_r]:16'b0;
+reg [`ISIZE-1:0] addr_r;
+
+assign read_data = memory[addr_r];
 
   always @(posedge clk)
     begin
       if(rst)
         begin
-          addr_r =0;
-          read_data=16'b0;
+          addr_r <=0;
           fin=$fopen("dm_test.txt","r");
 
 //          for (i = 0; i < 4096*`ISIZE-1; i = i + 1)
@@ -53,18 +53,18 @@ reg [`ASIZE-1:0] addr_r;
         begin
           if (ren)
 			 begin
-            read_data =memory[addr];
-				fout = $fopen("outdata.txt","a");
-              $fwrite(fout, "read: %h %h\n",read_data,addr);
-              $fclose(fout);
-				end
-            else if (wen)
-            begin            // active-low write enable
-              memory[addr] = write_data;
-              fout = $fopen("outdata.txt","a");
-              $fwrite(fout, "write: %h %h\n",write_data,addr);
-              $fclose(fout);
-            end
+            addr_r <= addr;
+			 	fout = $fopen("outdata.txt","a");
+            $fwrite(fout, "read: %h from %h\n",memory[addr], addr);
+            $fclose(fout);
+			 end
+			 else if (wen)
+			 begin            // active-low write enable
+			   memory[addr] <= write_data;
+			   fout = $fopen("outdata.txt","a");
+			   $fwrite(fout, "write: %h to %h\n",write_data, addr);
+			   $fclose(fout);
+			 end
         end
     end
 

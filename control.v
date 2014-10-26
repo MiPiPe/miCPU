@@ -8,6 +8,7 @@ module control(
   output reg branch,
   output reg mem_to_reg,
   output reg mem_write,
+  output reg mem_read,
   output reg ALUSrc,
   output reg RegDst
 
@@ -67,6 +68,7 @@ module control(
     branch = (inst == `BEQ)? 1'b1 : 1'b0;
     mem_to_reg = (inst == `LW)? 1'b1 : 1'b0;
     mem_write = (inst == `SW)? 1'b1 : 1'b0;
+	 mem_read = (inst == `LW)? 1'b1 : 1'b0;
     ALUSrc = (inst == `SLL || inst == `SRL || inst == `LW || inst == `SW)? 1'b1 : 1'b0;
     RegDst = (inst == `SW || inst == `BEQ)? 1'b1 : 1'b0;
 

@@ -4,15 +4,15 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.12 secs
  
---> Reading design: part1_without_pipeline.prj
+--> Reading design: part1.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -40,16 +40,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "part1_without_pipeline.prj"
+Input File Name                    : "part1.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "part1_without_pipeline"
+Output File Name                   : "part1"
 Output Format                      : NGC
 Target Device                      : xc6slx4-3-csg225
 
 ---- Source Options
-Top Module Name                    : part1_without_pipeline
+Top Module Name                    : part1
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -115,9 +115,18 @@ Parsing module <regfile>.
 Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\PC.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <PC1>.
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\MEM_WB_stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <MEM_WB_stage>.
 Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <memory>.
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\ID_EXEstage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <ID_EXE_stage>.
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\EXE_MEM_stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <EXE_MEM_stage>.
 Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" into library work
 Parsing verilog file "define.v" included at line 1.
 Parsing module <data_memory>.
@@ -129,15 +138,15 @@ Parsing verilog file "define.v" included at line 1.
 Parsing module <alu>.
 Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\adder.v" into library work
 Parsing module <adder>.
-Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" into library work
+Analyzing Verilog file "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" into library work
 Parsing verilog file "define.v" included at line 2.
-Parsing module <part1_without_pipeline>.
+Parsing module <part1>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <part1_without_pipeline>.
+Elaborating module <part1>.
 
 Elaborating module <PC1>.
 
@@ -146,7 +155,13 @@ WARNING:HDLCompiler:816 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-mast
 WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\memory.v" Line 41: System task fclose ignored for synthesis
 
 Elaborating module <adder>.
-WARNING:HDLCompiler:91 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" Line 49: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" Line 79: Signal <PCSrc> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <ID_EXE_stage>.
+
+Elaborating module <EXE_MEM_stage>.
+
+Elaborating module <MEM_WB_stage>.
 WARNING:HDLCompiler:327 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\sign_extend.v" Line 8: Concatenation with unsized literal; will interpret as 32 bits
 
 Elaborating module <sign_extend>.
@@ -164,25 +179,28 @@ WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-mast
 WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 53: System task fclose ignored for synthesis
 WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 59: System task fwrite ignored for synthesis
 WARNING:HDLCompiler:817 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\data_memory.v" Line 60: System task fclose ignored for synthesis
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 31. All outputs of instance <pc> of block <PC1> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 34. All outputs of instance <im> of block <memory> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 41. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 42. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 54. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 56. All outputs of instance <C0> of block <control> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 58. All outputs of instance <RF0> of block <regfile> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 60. All outputs of instance <ALU0> of block <alu> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
-WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v" line 62. All outputs of instance <DM> of block <data_memory> are unconnected in block <part1_without_pipeline>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 66. All outputs of instance <pc> of block <PC1> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 68. All outputs of instance <im> of block <memory> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 71. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 72. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 82. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 110. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 128. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 142. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 147. All outputs of instance <C0> of block <control> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 159. All outputs of instance <RF0> of block <regfile> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 171. All outputs of instance <ALU0> of block <alu> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v" line 179. All outputs of instance <DM> of block <data_memory> are unconnected in block <part1>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <part1_without_pipeline>.
-    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1_without_pipeline.v".
+Synthesizing Unit <part1>.
+    Related source file is "\\ds4.sce.ntu.edu.sg\xd4$\student\chen0819\miCPU-master\part1.v".
     Summary:
 	no macro.
-Unit <part1_without_pipeline> synthesized.
+Unit <part1> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -205,11 +223,11 @@ Found no macro
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <part1_without_pipeline> ...
+Optimizing unit <part1> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block part1_without_pipeline, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block part1, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -234,7 +252,7 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : part1_without_pipeline.ngc
+Top Level Output File Name         : part1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
@@ -306,13 +324,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.41 secs
+Total CPU time to Xst completion: 6.01 secs
  
 --> 
 
-Total memory usage is 264940 kilobytes
+Total memory usage is 265708 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

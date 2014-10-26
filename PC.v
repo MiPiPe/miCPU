@@ -2,7 +2,7 @@
 
 
 module PC1(
-       	clk,
+      clk,
 		rst,       
 		nextPC,		 
 		currPC);

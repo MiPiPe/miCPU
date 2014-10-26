@@ -24,12 +24,6 @@ assign read_data = memory[addr_r];
         begin
           addr_r <=0;
           fin=$fopen("dm_test.txt","r");
-
-//          for (i = 0; i < 4096*`ISIZE-1; i = i + 1)
-//          begin
-//             memory[i] = 16'h0000;
-//          end
-          //Now read in the input file
           while(!$feof(fin)) 
           begin
             c = $fgetc(fin);

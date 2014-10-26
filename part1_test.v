@@ -1,13 +1,14 @@
 `timescale 1ns / 1ps
 
-module part1_without_pipeline_test;
+
+module part1_test;
 
 	// Inputs
 	reg clk;
 	reg rst;
 
 	// Instantiate the Unit Under Test (UUT)
-	part1_without_pipeline uut (
+	part1 uut (
 		.clk(clk), 
 		.rst(rst)
 	);
@@ -26,4 +27,3 @@ always #15 clk = ~clk;
 	end
       
 endmodule
-

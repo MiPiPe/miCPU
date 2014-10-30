@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Oct 30 11:46:38 2014">
+  <application stringID="Xst" timeStamp="Sat Oct 25 18:04:47 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -45,16 +45,16 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Xeon(R) CPU           X5690  @ 3.47GHz"/>
-          <item stringID="speed" value="3467 MHz"/>
+          <item stringID="speed" value="3466 MHz"/>
         </row>
       </table>
     </section>
     <section stringID="XST_OPTION_SUMMARY">
-      <item DEFAULT="" label="-ifn" stringID="XST_IFN" value="part1.prj"/>
-      <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="part1"/>
+      <item DEFAULT="" label="-ifn" stringID="XST_IFN" value="part1_without_pipeline.prj"/>
+      <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="part1_without_pipeline"/>
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
       <item DEFAULT="" label="-p" stringID="XST_P" value="xc6slx4-3-csg225"/>
-      <item DEFAULT="" label="-top" stringID="XST_TOP" value="part1"/>
+      <item DEFAULT="" label="-top" stringID="XST_TOP" value="part1_without_pipeline"/>
       <item DEFAULT="Speed" label="-opt_mode" stringID="XST_OPTMODE" value="Speed"/>
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
       <item DEFAULT="No" label="-power" stringID="XST_POWER" value="NO"/>
@@ -110,7 +110,7 @@
     </section>
     <section stringID="XST_DESIGN_SUMMARY">
       <section stringID="XST_">
-        <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="part1.ngc"/>
+        <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="part1_without_pipeline.ngc"/>
       </section>
       <section stringID="XST_PRIMITIVE_AND_BLACK_BOX_USAGE"/>
     </section>
@@ -129,7 +129,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="22"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="20"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
     </section>
   </application>

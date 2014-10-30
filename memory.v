@@ -42,7 +42,7 @@ assign data_out = memory[addr_r];
   	     end
       else
         begin
-	        addr_r <= addr;
+	       addr_r <= addr;
           if (wen)
             begin            // active-high write enable
               memory[addr] <= data_in;

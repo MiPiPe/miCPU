@@ -36,9 +36,9 @@ assign read_data = memory[addr_r];
                   r = $ungetc(c, fin);
                   r = $fscanf(fin, "%h %h",t_addr, t_data);
                   memory[t_addr]=t_data;
-						fout = $fopen("readfromtext.txt","a");
-					  $fwrite(fout, "read from text: %h %h\n",t_addr,t_data);
-					  $fclose(fout);
+						fout = $fopen("dm_init.txt","a");
+					   $fwrite(fout, "read from %h: %h\n",t_addr,t_data);
+					   $fclose(fout);
                end
           end
           $fclose(fin);
@@ -48,15 +48,15 @@ assign read_data = memory[addr_r];
           if (ren)
 			 begin
             addr_r <= addr;
-			 	fout = $fopen("outdata.txt","a");
-            $fwrite(fout, "read: %h from %h\n",memory[addr], addr);
+			 	fout = $fopen("dm_read.txt","a");
+            $fwrite(fout, "read: %h from address %h\n",memory[addr], addr);
             $fclose(fout);
 			 end
 			 else if (wen)
 			 begin            // active-low write enable
 			   memory[addr] <= write_data;
-			   fout = $fopen("outdata.txt","a");
-			   $fwrite(fout, "write: %h to %h\n",write_data, addr);
+			   fout = $fopen("dm_write.txt","a");
+			   $fwrite(fout, "write: %h to address %h\n",write_data, addr);
 			   $fclose(fout);
 			 end
         end

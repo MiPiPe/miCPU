@@ -21,7 +21,7 @@ always #15 clk = ~clk;
 		// Wait 100 ns for global reset to finish
 		#100;
 #100 rst =1;
-#100 rst=0;
+#100 rst = 0;
 		// Add stimulus here
 
 	end

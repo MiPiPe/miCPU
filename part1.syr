@@ -174,22 +174,20 @@ Elaborating module <alu>.
 Elaborating module <data_memory>.
 WARNING:HDLCompiler:816 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 27: System function call feof not supported
 WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 44: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 52: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 53: System task fclose ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 59: System task fwrite ignored for synthesis
-WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 60: System task fclose ignored for synthesis
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 67. All outputs of instance <pc> of block <PC1> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 69. All outputs of instance <im> of block <memory> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 72. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 73. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 92. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 121. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 139. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 153. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 158. All outputs of instance <C0> of block <control> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 170. All outputs of instance <RF0> of block <regfile> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 182. All outputs of instance <ALU0> of block <alu> are unconnected in block <part1>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 190. All outputs of instance <DM> of block <data_memory> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 60: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 61: System task fclose ignored for synthesis
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 77. All outputs of instance <pc> of block <PC1> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 79. All outputs of instance <im> of block <memory> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 82. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 83. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 107. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 139. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 161. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 179. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 184. All outputs of instance <C0> of block <control> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 199. All outputs of instance <RF0> of block <regfile> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 211. All outputs of instance <ALU0> of block <alu> are unconnected in block <part1>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part1.v" line 219. All outputs of instance <DM> of block <data_memory> are unconnected in block <part1>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -323,13 +321,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.35 secs
+Total CPU time to Xst completion: 5.57 secs
  
 --> 
 
-Total memory usage is 265580 kilobytes
+Total memory usage is 266092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   22 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

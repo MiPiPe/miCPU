@@ -14,15 +14,15 @@ module data_memory( clk, rst, wen,ren, addr, write_data, read_data);
 integer fin, fout,i, c, r;
 reg [`ISIZE-1:0] t_addr;
 reg [`DSIZE-1:0] t_data;
-reg [`ISIZE-1:0] addr_r;
+//reg [`ISIZE-1:0] addr_r;
 
-assign read_data = memory[addr_r];
+assign read_data = (ren)? memory[addr] : 16'h0000;
 
   always @(posedge clk)
     begin
       if(rst)
         begin
-          addr_r <=0;
+          //addr_r <=0;
           fin=$fopen("dm_test.txt","r");
           while(!$feof(fin)) 
           begin
@@ -45,14 +45,15 @@ assign read_data = memory[addr_r];
         end
       else
         begin
-          if (ren)
+          /*if (ren)
 			 begin
             addr_r <= addr;
 			 	fout = $fopen("dm_read.txt","a");
             $fwrite(fout, "read: %h from address %h\n",memory[addr], addr);
             $fclose(fout);
 			 end
-			 else if (wen)
+			 else */
+			 if (wen)
 			 begin            // active-low write enable
 			   memory[addr] <= write_data;
 			   fout = $fopen("dm_write.txt","a");

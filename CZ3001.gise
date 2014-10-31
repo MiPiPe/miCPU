@@ -23,6 +23,7 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="data_memory_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -38,7 +39,7 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="part1_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="part1_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="part1_summary.html"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="part1_test_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="part1_test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="part1_test_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="part1_test_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="part1_test_stx_beh.prj"/>
@@ -65,46 +66,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1414220614" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1414220614">
+    <transform xil_pn:end_ts="1414755158" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1414755158">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414740727" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414740727">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="EXE_MEM_stage.v"/>
-      <outfile xil_pn:name="EXE_WB_stage.v"/>
-      <outfile xil_pn:name="ID_EXEstage.v"/>
-      <outfile xil_pn:name="MEM_WB_stage.v"/>
-      <outfile xil_pn:name="PC.v"/>
-      <outfile xil_pn:name="adder.v"/>
-      <outfile xil_pn:name="alu.v"/>
-      <outfile xil_pn:name="control.v"/>
-      <outfile xil_pn:name="data_memory.v"/>
-      <outfile xil_pn:name="define.v"/>
-      <outfile xil_pn:name="memory.v"/>
-      <outfile xil_pn:name="part1.v"/>
-      <outfile xil_pn:name="part1_test.v"/>
-      <outfile xil_pn:name="part1_without_pipeline.v"/>
-      <outfile xil_pn:name="part1_without_pipeline_test.v"/>
-      <outfile xil_pn:name="pipelined_2_stage.v"/>
-      <outfile xil_pn:name="pipelined_regfile_3stage.v"/>
-      <outfile xil_pn:name="regfile.v"/>
-      <outfile xil_pn:name="sign_extend.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1414740744" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="579819535178446174" xil_pn:start_ts="1414740744">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1414740744" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1314001982476372252" xil_pn:start_ts="1414740744">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1414319415" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2447650240452834439" xil_pn:start_ts="1414319415">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1414740727" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414740727">
+    <transform xil_pn:end_ts="1414758213" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414758213">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="EXE_MEM_stage.v"/>
@@ -127,7 +93,42 @@
       <outfile xil_pn:name="regfile.v"/>
       <outfile xil_pn:name="sign_extend.v"/>
     </transform>
-    <transform xil_pn:end_ts="1414740747" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1291970759927481051" xil_pn:start_ts="1414740744">
+    <transform xil_pn:end_ts="1414755158" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="579819535178446174" xil_pn:start_ts="1414755158">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414755158" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1314001982476372252" xil_pn:start_ts="1414755158">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414755158" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2447650240452834439" xil_pn:start_ts="1414755158">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414758213" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414758213">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="EXE_MEM_stage.v"/>
+      <outfile xil_pn:name="EXE_WB_stage.v"/>
+      <outfile xil_pn:name="ID_EXEstage.v"/>
+      <outfile xil_pn:name="MEM_WB_stage.v"/>
+      <outfile xil_pn:name="PC.v"/>
+      <outfile xil_pn:name="adder.v"/>
+      <outfile xil_pn:name="alu.v"/>
+      <outfile xil_pn:name="control.v"/>
+      <outfile xil_pn:name="data_memory.v"/>
+      <outfile xil_pn:name="define.v"/>
+      <outfile xil_pn:name="memory.v"/>
+      <outfile xil_pn:name="part1.v"/>
+      <outfile xil_pn:name="part1_test.v"/>
+      <outfile xil_pn:name="part1_without_pipeline.v"/>
+      <outfile xil_pn:name="part1_without_pipeline_test.v"/>
+      <outfile xil_pn:name="pipelined_2_stage.v"/>
+      <outfile xil_pn:name="pipelined_regfile_3stage.v"/>
+      <outfile xil_pn:name="regfile.v"/>
+      <outfile xil_pn:name="sign_extend.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1414758216" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1291970759927481051" xil_pn:start_ts="1414758213">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -139,7 +140,7 @@
       <outfile xil_pn:name="part1_test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1414740748" xil_pn:in_ck="5180636293685047018" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3121918758097179394" xil_pn:start_ts="1414740747">
+    <transform xil_pn:end_ts="1414758216" xil_pn:in_ck="-499510633400030453" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3121918758097179394" xil_pn:start_ts="1414758216">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -176,12 +177,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414740721" xil_pn:in_ck="6961608633290180016" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6869633796131666328" xil_pn:start_ts="1414740713">
+    <transform xil_pn:end_ts="1414758209" xil_pn:in_ck="6961608633290180016" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6869633796131666328" xil_pn:start_ts="1414758200">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="part1.lso"/>
       <outfile xil_pn:name="part1.ngc"/>
@@ -190,6 +191,7 @@
       <outfile xil_pn:name="part1.stx"/>
       <outfile xil_pn:name="part1.syr"/>
       <outfile xil_pn:name="part1.xst"/>
+      <outfile xil_pn:name="part1_test_beh.prj"/>
       <outfile xil_pn:name="part1_test_stx_beh.prj"/>
       <outfile xil_pn:name="part1_without_pipeline.prj"/>
       <outfile xil_pn:name="part1_without_pipeline_test_beh.prj"/>

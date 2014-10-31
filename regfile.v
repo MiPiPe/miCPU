@@ -31,7 +31,7 @@ module regfile (
 
 	reg [`DSIZE-1:0] regdata [0:`NREG-1];
 	
-integer i;
+	integer i;
 
 	always@(posedge clk)
 		begin
@@ -47,7 +47,7 @@ integer i;
 				regdata[waddr] <= ((wen == 1) && (waddr != 0)) ? wdata : regdata[waddr];
 		end
 	
-	assign rdata1 = ((wen) && (waddr == raddr1) && (waddr != 0)) ? wdata : regdata[raddr1];
-	assign rdata2 = ((wen) && (waddr == raddr2) && (waddr != 0)) ? wdata : regdata[raddr2];
+	assign rdata1 = regdata[raddr1];
+	assign rdata2 = regdata[raddr2];
 
 endmodule 

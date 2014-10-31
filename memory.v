@@ -14,15 +14,15 @@ module memory( clk, rst, wen, addr, data_in, data_out);
 integer fin, i, c, r;
 reg [`ISIZE-1:0] t_addr;
 reg [`DSIZE-1:0] t_data;
-reg [`ISIZE-1:0] addr_r;
+//reg [`ISIZE-1:0] addr_r;
 
-assign data_out = memory[addr_r];
+assign data_out = memory[addr];
 
   always @(posedge clk)
     begin
       if(rst)
         begin
-	       addr_r <=0;
+	       //addr_r <=0;
   	       fin = $fopen("im_test.txt","r");
       	 while (!$feof(fin))
           begin
@@ -42,7 +42,7 @@ assign data_out = memory[addr_r];
   	     end
       else
         begin
-	       addr_r <= addr;
+	       //addr_r <= addr;
           if (wen)
             begin            // active-high write enable
               memory[addr] <= data_in;

@@ -30,7 +30,7 @@ wire [`DSIZE-1:0] wdata;
 //Program counter
 wire [`ISIZE-1:0] PCOUT; 
 wire [`ISIZE-1:0] nPC;
-reg [`ISIZE-1:0] PCIN;
+wire [`ISIZE-1:0] PCIN;
 
 //Pipeline 1
 wire wen_P1;
@@ -74,7 +74,7 @@ adder BranchAdder(.a(nPC_P1), .b(imm_extended_P1), .out(branch_adder_out));
 assign raddr2 = (RegDst)? INST[11:8] : INST[3:0];
 assign rdata2_imm_sel = (ALUSrc)? imm_extended : rdata2;
 assign wdata = (mem_to_reg_P3)? rdata_mem_P3 : result_P3; 
-//assign PCIN = (PCSrc)? branch_adder_out : nPC_P1; 
+assign PCIN = (PCSrc)? branch_adder_out : nPC; 
 
 always @((clk))
 begin
@@ -82,10 +82,10 @@ begin
 	/*if (PCIN == 0)
 		nPC_P1 = 1;*/
 	
-	if (PCSrc == 1)
+	/*if (PCSrc == 1)
 		PCIN <= branch_adder_out;
 	else
-		PCIN <= nPC;
+		PCIN <= nPC;*/
 //PCIN <= (PCSrc)? branch_adder_out : nPC_P1; 
 end
 

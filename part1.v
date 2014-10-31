@@ -14,7 +14,7 @@ wire [`DSIZE-1:0] result;
 wire [`DSIZE-1:0] INST;
 wire [2:0] opcode;
 wire [`DSIZE-1:0] imm_extended;
-wire [`ISIZE-1:0] branch_adder_out;
+wire [`DSIZE-1:0] result_memread_sel;
 //Data memory
 wire [`DSIZE-1:0] rdata_mem;
 //Control unit
@@ -26,12 +26,18 @@ wire RegDst;
 wire ALUSrc;
 wire mem_write;
 wire mem_to_reg;
-wire [`DSIZE-1:0] wdata;
+wire jump, jr, jal;
 //Program counter
 wire [`ISIZE-1:0] PCOUT; 
 wire [`ISIZE-1:0] nPC;
 wire [`ISIZE-1:0] PCIN;
-
+wire [`ISIZE-1:0] branch_adder_out;
+wire [`ISIZE-1:0] jump_sel;
+wire [`ISIZE-1:0] PCSrc_sel;
+wire [`ISIZE-1:0] jump_addr;
+//JAL register
+wire [`ASIZE-1:0] waddr_jal_sel;
+wire [`DSIZE-1:0] wdata_jal_sel;
 //Pipeline 1
 wire wen_P1;
 wire [`ISIZE-1:0] nPC_P1;
@@ -45,6 +51,8 @@ wire [`DSIZE-1:0] alu_in2;
 wire [`DSIZE-1:0] rdata2_P1;
 wire [2:0] opcode_P1;
 wire [`ASIZE-1:0] waddr_P1;
+wire jal_P1;
+wire [`ISIZE-1:0] PC_jal_P1;
 
 //Pipeline 2
 wire wen_P2;
@@ -54,6 +62,8 @@ wire mem_read_P2;
 wire mem_to_reg_P2;
 wire [`DSIZE-1:0] result_P2;
 wire [`ASIZE-1:0] waddr_P2;
+wire jal_P2;
+wire [`ISIZE-1:0] PC_jal_P2;
 
 //Pipeline 3
 wire wen_P3;
@@ -61,8 +71,8 @@ wire mem_to_reg_P3;
 wire [`DSIZE-1:0] result_P3;
 wire [`DSIZE-1:0] rdata_mem_P3;
 wire [`ASIZE-1:0] waddr_P3;
-
-
+wire jal_P3;
+wire [`ISIZE-1:0] PC_jal_P3;
 
 PC1 pc(.clk(clk),.rst(rst),.nextPC(PCIN),.currPC(PCOUT));
 
@@ -73,8 +83,13 @@ adder PCAdder(.a(PCOUT), .b(16'b1), .out(nPC));
 adder BranchAdder(.a(nPC_P1), .b(imm_extended_P1), .out(branch_adder_out));
 assign raddr2 = (RegDst)? INST[11:8] : INST[3:0];
 assign rdata2_imm_sel = (ALUSrc)? imm_extended : rdata2;
-assign wdata = (mem_to_reg_P3)? rdata_mem_P3 : result_P3; 
-assign PCIN = (PCSrc)? branch_adder_out : nPC; 
+assign result_memread_sel = (mem_to_reg_P3)? rdata_mem_P3 : result_P3; 
+assign PCSrc_sel = (PCSrc)? branch_adder_out : nPC; 
+assign jump_addr = {nPC[15:12], INST[11:0]};
+assign jump_sel = (jump)? jump_addr : PCSrc_sel;
+assign PCIN = (jr)? rdata1 : jump_sel;
+assign waddr_jal_sel = (jal_P3)? 4'hf : waddr_P3;
+assign wdata_jal_sel = (jal_P3)? PC_jal_P3 : result_memread_sel;
 
 always @((clk))
 begin
@@ -91,7 +106,6 @@ end
 
 ID_EXE_stage PIPE1(
 	.clk(clk), 
-	//.rst(rst),
 	.wen_in(wen), 
 	.wen_out(wen_P1), 
 	.nPC_in(nPC), 
@@ -115,7 +129,11 @@ ID_EXE_stage PIPE1(
 	.rdata2_in(rdata2),
 	.rdata2_out(rdata2_P1), 
 	.opcode_in(opcode), 
-	.opcode_out(opcode_P1)
+	.opcode_out(opcode_P1),
+	.jal_in(jal),
+	.jal_out(jal_P1),
+	.PC_jal_in(nPC),
+	.PC_jal_out(PC_jal_P1)
 );
 
 EXE_MEM_stage PIPE2(
@@ -133,7 +151,11 @@ EXE_MEM_stage PIPE2(
 	.result_in(result),
 	.result_out(result_P2),
 	.waddr_in(waddr_P1),
-	.waddr_out(waddr_P2)
+	.waddr_out(waddr_P2),
+	.jal_in(jal_P1),
+	.jal_out(jal_P2),
+	.PC_jal_in(PC_jal_P1),
+	.PC_jal_out(PC_jal_P2)
 );
 
 MEM_WB_stage PIPE3(
@@ -147,7 +169,11 @@ MEM_WB_stage PIPE3(
 	.rdata_mem_in(rdata_mem),
 	.rdata_mem_out(rdata_mem_P3),
 	.waddr_in(waddr_P2),
-	.waddr_out(waddr_P3)
+	.waddr_out(waddr_P3),
+	.jal_in(jal_P2),
+	.jal_out(jal_P3),
+	.PC_jal_in(PC_jal_P2),
+	.PC_jal_out(PC_jal_P3)
 );
 
 sign_extend SE (
@@ -164,7 +190,10 @@ control C0 (
 	.mem_write(mem_write), 
 	.mem_read(mem_read), 
 	.ALUSrc(ALUSrc), 
-	.RegDst(RegDst)
+	.RegDst(RegDst),
+	.jr(jr),
+	.jump(jump),
+	.jal(jal)
 );
 
 regfile  RF0 (
@@ -173,8 +202,8 @@ regfile  RF0 (
 	.wen(wen_P3), 
 	.raddr1(INST[7:4]), 
 	.raddr2(raddr2), 
-	.waddr(waddr_P3), 
-	.wdata(wdata), 
+	.waddr(waddr_jal_sel), 
+	.wdata(wdata_jal_sel), 
 	.rdata1(rdata1), 
 	.rdata2(rdata2)
 );

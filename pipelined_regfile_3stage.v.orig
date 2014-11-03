@@ -3,11 +3,11 @@
 
 module pipelined_regfile_3stage(clk, rst, fileid, PCOUT, INST, aluop, rdata1, rdata2, rdata1_ID_EXE,rdata2_ID_EXE, aluop_ID_EXE,waddr_out_ID_EXE,aluout,aluout_EXE_WB,waddr_out_EXE_WB,imm_in);
 
-input clk;
-
+input clk;				
+											
 input	rst;
-input fileid;
-
+input fileid; 
+ 
 output [`ISIZE-1:0]PCOUT;
 output [`DSIZE-1:0] rdata1;
 output [`DSIZE-1:0] rdata1_ID_EXE;//output from ID_EXE stage
@@ -21,7 +21,7 @@ output [2:0] aluop_ID_EXE;//output from ID_EXE stage
 output [`ASIZE-1:0] waddr_out_ID_EXE;//output from ID_EXE stage
 output [`ASIZE-1:0] waddr_out_EXE_WB;//output from EXE_WB stage
 output [`DSIZE-1:0] imm_in;
-
+ 	 
 //Program counter
 reg [`ISIZE-1:0]PCIN=16'b0;
 
@@ -29,7 +29,7 @@ PC1 pc(.clk(clk),.rst(rst),.nextPC(PCIN),.currPC(PCOUT));
 
 always @((clk))
 begin
-    PCIN <= PCOUT + 16'b1; //increments PC to PC +1
+PCIN <= PCOUT + 16'b1; //increments PC to PC +1
 end
 
 //instruction memory
@@ -50,7 +50,7 @@ ID_EXE_stage PIPE1(.clk(clk), .rdata1_in(rdata1),.rdata2_in(rdata2),.imm_in(imm_
 EXE_WB_stage PIPE2(.clk(clk), .waddr_in(waddr_out_ID_EXE), .waddr_out(waddr_out_EXE_WB), .alu_in(aluout), .alu_out(aluout_EXE_WB) );//immediate value is given as 0 as we are concentrating only on R-type instuctions
 
 alu ALU0 ( .a(rdata1_ID_EXE), .b(rdata2_ID_EXE), .op(aluop_ID_EXE), .imm(imm_ID_EXE), .out(aluout));//alu takes its input from the pipeline register
-
+ 
 endmodule
 
 

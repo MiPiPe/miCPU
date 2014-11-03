@@ -4,7 +4,7 @@
 module part1_without_pipeline(clk, rst);
 
 input clk;
-											
+
 input	rst;
 
 wire [`DSIZE-1:0] rdata1;
@@ -42,11 +42,11 @@ adder PCAdder(.a(PCOUT), .b(16'b1), .out(nPC));
 adder BranchAdder(.a(nPC), .b(imm_extended), .out(branch_adder_out));
 assign raddr2 = (RegDst)? INST[11:8] : INST[3:0];
 assign alu_in2 = (ALUSrc)? imm_extended : rdata2;
-assign wdata = (mem_to_reg)? rdata_mem : aluout; 
+assign wdata = (mem_to_reg)? rdata_mem : aluout;
 
 always @((clk))
 begin
-	PCIN <= (PCSrc)? branch_adder_out : nPC; 
+    PCIN <= (PCSrc)? branch_adder_out : nPC;
 end
 
 // adder JumpAdder(.a(), .b(), out(JumpAdder_out));

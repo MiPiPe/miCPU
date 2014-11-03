@@ -72,10 +72,8 @@
     <transform xil_pn:end_ts="1414740727" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414740727">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="EXE_MEM_stage.v"/>
       <outfile xil_pn:name="EXE_WB_stage.v"/>
       <outfile xil_pn:name="ID_EXEstage.v"/>
-      <outfile xil_pn:name="MEM_WB_stage.v"/>
       <outfile xil_pn:name="PC.v"/>
       <outfile xil_pn:name="adder.v"/>
       <outfile xil_pn:name="alu.v"/>
@@ -83,10 +81,7 @@
       <outfile xil_pn:name="data_memory.v"/>
       <outfile xil_pn:name="define.v"/>
       <outfile xil_pn:name="memory.v"/>
-      <outfile xil_pn:name="part1.v"/>
-      <outfile xil_pn:name="part1_test.v"/>
       <outfile xil_pn:name="part1_without_pipeline.v"/>
-      <outfile xil_pn:name="part1_without_pipeline_test.v"/>
       <outfile xil_pn:name="pipelined_2_stage.v"/>
       <outfile xil_pn:name="pipelined_regfile_3stage.v"/>
       <outfile xil_pn:name="regfile.v"/>
@@ -107,10 +102,8 @@
     <transform xil_pn:end_ts="1414740727" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414740727">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="EXE_MEM_stage.v"/>
       <outfile xil_pn:name="EXE_WB_stage.v"/>
       <outfile xil_pn:name="ID_EXEstage.v"/>
-      <outfile xil_pn:name="MEM_WB_stage.v"/>
       <outfile xil_pn:name="PC.v"/>
       <outfile xil_pn:name="adder.v"/>
       <outfile xil_pn:name="alu.v"/>
@@ -118,10 +111,7 @@
       <outfile xil_pn:name="data_memory.v"/>
       <outfile xil_pn:name="define.v"/>
       <outfile xil_pn:name="memory.v"/>
-      <outfile xil_pn:name="part1.v"/>
-      <outfile xil_pn:name="part1_test.v"/>
       <outfile xil_pn:name="part1_without_pipeline.v"/>
-      <outfile xil_pn:name="part1_without_pipeline_test.v"/>
       <outfile xil_pn:name="pipelined_2_stage.v"/>
       <outfile xil_pn:name="pipelined_regfile_3stage.v"/>
       <outfile xil_pn:name="regfile.v"/>
@@ -130,23 +120,24 @@
     <transform xil_pn:end_ts="1414740747" xil_pn:in_ck="6654966748995096835" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1291970759927481051" xil_pn:start_ts="1414740744">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="part1_test_beh.prj"/>
-      <outfile xil_pn:name="part1_test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
     <transform xil_pn:end_ts="1414740748" xil_pn:in_ck="5180636293685047018" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3121918758097179394" xil_pn:start_ts="1414740747">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="part1_test_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1414226686" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1414226686">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -180,20 +171,17 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="part1.lso"/>
       <outfile xil_pn:name="part1.ngc"/>
       <outfile xil_pn:name="part1.ngr"/>
       <outfile xil_pn:name="part1.prj"/>
-      <outfile xil_pn:name="part1.stx"/>
       <outfile xil_pn:name="part1.syr"/>
       <outfile xil_pn:name="part1.xst"/>
-      <outfile xil_pn:name="part1_test_stx_beh.prj"/>
       <outfile xil_pn:name="part1_without_pipeline.prj"/>
-      <outfile xil_pn:name="part1_without_pipeline_test_beh.prj"/>
-      <outfile xil_pn:name="part1_without_pipeline_test_stx_beh.prj"/>
       <outfile xil_pn:name="part1_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

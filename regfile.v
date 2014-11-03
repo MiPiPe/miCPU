@@ -39,7 +39,7 @@ module regfile (
 				begin
 					for (i=0; i<`NREG; i=i+1)
 					regdata[i] <=0;
-					regdata[1] <=5;//initialization regdata[1] is initialized with 5.
+					//regdata[1] <=5;//initialization regdata[1] is initialized with 5.
 					
 				end
 

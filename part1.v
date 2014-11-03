@@ -192,7 +192,7 @@ data_memory DM (
 	.rst(rst), 
 	.wen(mem_write_P2), 
 	.ren(mem_read_P2), 
-	.addr(result), 
+	.addr(result_P2), 
 	.write_data(rdata2_P2), 
 	.read_data(rdata_mem)
 );

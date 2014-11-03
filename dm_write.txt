@@ -1,2 +1,4 @@
 
 write: 0003 to address 0001
+write: 0003 to address 0001
+write: 0003 to address 0001

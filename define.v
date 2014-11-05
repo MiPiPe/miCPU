@@ -13,8 +13,6 @@
 `define JR  4'b1011
 `define J   4'b1100
 `define JAL 4'b1101
-`define ADDI 4'b1110
-`define ANDI 4'b1111
 
 //for fileIO
 `timescale 1ns / 10ps

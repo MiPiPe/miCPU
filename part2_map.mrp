@@ -1,0 +1,29 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Mapping Report File for Design 'part2'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx4-csg225-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o part2_map.ncd part2.ngd part2.pcf 
+Target Device  : xc6slx4
+Target Package : csg225
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Nov 05 22:47:41 2014
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Map:116 - The design is empty.  No processing will be done.
+ERROR:Map:52 - Problem encountered processing RPMs. 
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------

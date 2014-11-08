@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/chen0819/CZ3003_Final/part2_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="part2_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/part2_test/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/INST" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">INST[15:0]</obj_property>
+      <obj_property name="ObjectShortName">INST[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/PCOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PCOUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PCOUT[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/nPC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nPC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">nPC[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/PCIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PCIN[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PCIN[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/jump" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">jump</obj_property>
+      <obj_property name="ObjectShortName">jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/jr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">jr</obj_property>
+      <obj_property name="ObjectShortName">jr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/jal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">jal</obj_property>
+      <obj_property name="ObjectShortName">jal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/waddr_jal_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">waddr_jal_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr_jal_sel[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/jump_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">jump_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">jump_addr[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/jump_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">jump_sel[15:0]</obj_property>
+      <obj_property name="ObjectShortName">jump_sel[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/wdata_jal_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wdata_jal_sel[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_jal_sel[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/part2_test/uut/rdata1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rdata1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,333 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: part2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "part2.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "part2"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : part2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\sign_extend.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <sign_extend>.
+WARNING:HDLCompiler:327 - "C:\Users\chen0819\CZ3003_Final\sign_extend.v" Line 8: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\regfile.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <regfile>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\PC.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <PC1>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\MEM_WB_stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <MEM_WB_stage>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\memory.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <memory>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\ID_EXEstage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <ID_EXE_stage>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\EXE_MEM_stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <EXE_MEM_stage>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\data_memory.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <data_memory>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\control.v" into library work
+Parsing verilog file "define.v" included at line 3.
+Parsing module <control>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\alu.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <alu>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\adder.v" into library work
+Parsing module <adder>.
+Analyzing Verilog file "C:\Users\chen0819\CZ3003_Final\part2.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <part2>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <part2>.
+
+Elaborating module <PC1>.
+
+Elaborating module <memory>.
+WARNING:HDLCompiler:816 - "C:\Users\chen0819\CZ3003_Final\memory.v" Line 27: System function call feof not supported
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\CZ3003_Final\memory.v" Line 41: System task fclose ignored for synthesis
+
+Elaborating module <adder>.
+
+Elaborating module <ID_EXE_stage>.
+
+Elaborating module <EXE_MEM_stage>.
+
+Elaborating module <MEM_WB_stage>.
+WARNING:HDLCompiler:327 - "C:\Users\chen0819\CZ3003_Final\sign_extend.v" Line 8: Concatenation with unsized literal; will interpret as 32 bits
+
+Elaborating module <sign_extend>.
+
+Elaborating module <control>.
+
+Elaborating module <regfile>.
+
+Elaborating module <alu>.
+
+Elaborating module <data_memory>.
+WARNING:HDLCompiler:816 - "C:\Users\chen0819\CZ3003_Final\data_memory.v" Line 27: System function call feof not supported
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\CZ3003_Final\data_memory.v" Line 44: System task fclose ignored for synthesis
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\CZ3003_Final\data_memory.v" Line 60: System task fwrite ignored for synthesis
+WARNING:HDLCompiler:817 - "C:\Users\chen0819\CZ3003_Final\data_memory.v" Line 61: System task fclose ignored for synthesis
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 77. All outputs of instance <pc> of block <PC1> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 79. All outputs of instance <im> of block <memory> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 82. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 83. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 107. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 139. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 161. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 179. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 184. All outputs of instance <C0> of block <control> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 199. All outputs of instance <RF0> of block <regfile> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 211. All outputs of instance <ALU0> of block <alu> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\CZ3003_Final\part2.v" line 219. All outputs of instance <DM> of block <data_memory> are unconnected in block <part2>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <part2>.
+    Related source file is "C:\Users\chen0819\CZ3003_Final\part2.v".
+    Summary:
+	no macro.
+Unit <part2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <part2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block part2, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : part2.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   0  out of    132     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.62 secs
+ 
+--> 
+
+Total memory usage is 265708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

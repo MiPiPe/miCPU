@@ -12,7 +12,7 @@ Total CPU time to Xst completion: 0.09 secs
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
---> Reading design: part2.prj
+--> Reading design: part2_with_cache.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -40,16 +40,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "part2.prj"
+Input File Name                    : "part2_with_cache.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "part2"
+Output File Name                   : "part2_with_cache"
 Output Format                      : NGC
 Target Device                      : xc6slx4-3-csg225
 
 ---- Source Options
-Top Module Name                    : part2
+Top Module Name                    : part2_with_cache
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -142,13 +142,13 @@ Analyzing Verilog file "C:\Users\chen0819\Desktop\miCPU\adder.v" into library wo
 Parsing module <adder>.
 Analyzing Verilog file "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" into library work
 Parsing verilog file "define.v" included at line 2.
-Parsing module <part2>.
+Parsing module <part2_with_cache>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <part2>.
+Elaborating module <part2_with_cache>.
 
 Elaborating module <PC1>.
 
@@ -179,33 +179,33 @@ WARNING:HDLCompiler:817 - "C:\Users\chen0819\Desktop\miCPU\data_memory.v" Line 6
 
 Elaborating module <cache>.
 WARNING:HDLCompiler:413 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 34: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 102: Result of 10-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 128: Result of 10-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 102: Result of 10-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 128: Result of 10-bit expression is truncated to fit in 2-bit target.
 WARNING:HDLCompiler:1127 - "C:\Users\chen0819\Desktop\miCPU\cache.v" Line 39: Assignment to cache_data_in_reg ignored, since the identifier is never used
 WARNING:HDLCompiler:189 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" Line 236: Size mismatch in connection of port <wb_addr>. Formal port size is 13-bit while actual signal size is 12-bit.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 87. All outputs of instance <pc> of block <PC1> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 89. All outputs of instance <im> of block <memory> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 93. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 94. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 105. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 137. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 159. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 177. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 182. All outputs of instance <C0> of block <control> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 197. All outputs of instance <RF0> of block <regfile> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 209. All outputs of instance <ALU0> of block <alu> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 217. All outputs of instance <DM> of block <data_memory> are unconnected in block <part2>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 225. All outputs of instance <CA> of block <cache> are unconnected in block <part2>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 87. All outputs of instance <pc> of block <PC1> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 89. All outputs of instance <im> of block <memory> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 93. All outputs of instance <PCAdder> of block <adder> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 94. All outputs of instance <BranchAdder> of block <adder> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 105. All outputs of instance <PIPE1> of block <ID_EXE_stage> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 137. All outputs of instance <PIPE2> of block <EXE_MEM_stage> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 159. All outputs of instance <PIPE3> of block <MEM_WB_stage> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 177. All outputs of instance <SE> of block <sign_extend> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 182. All outputs of instance <C0> of block <control> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 197. All outputs of instance <RF0> of block <regfile> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 209. All outputs of instance <ALU0> of block <alu> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 217. All outputs of instance <DM> of block <data_memory> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v" line 225. All outputs of instance <CA> of block <cache> are unconnected in block <part2_with_cache>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <part2>.
+Synthesizing Unit <part2_with_cache>.
     Related source file is "C:\Users\chen0819\Desktop\miCPU\part2_with_cache.v".
     Summary:
 	no macro.
-Unit <part2> synthesized.
+Unit <part2_with_cache> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -228,11 +228,11 @@ Found no macro
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <part2> ...
+Optimizing unit <part2_with_cache> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block part2, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block part2_with_cache, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -257,7 +257,7 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : part2.ngc
+Top Level Output File Name         : part2_with_cache.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
@@ -328,12 +328,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 31.00 secs
-Total CPU time to Xst completion: 31.17 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.66 secs
  
 --> 
 
-Total memory usage is 302700 kilobytes
+Total memory usage is 268844 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   24 (   0 filtered)

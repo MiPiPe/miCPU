@@ -9,12 +9,9 @@ module regfile (
            raddr2,
            waddr,
            wdata,
-
            rdata1,
            rdata2
        );
-
-
 
 input clk;
 input rst;
@@ -40,11 +37,9 @@ begin
         for (i=0; i<`NREG; i=i+1)
             regdata[i] <=0;
         regdata[1] <=5;//initialization regdata[1] is initialized with 5.
-
     end
-
     else
-        regdata[waddr] <= ((wen == 1) && (waddr != 0)) ? wdata : regdata[waddr];
+      regdata[waddr] <= ((wen == 1) && (waddr != 0)) ? wdata : regdata[waddr];
 end
 
 assign rdata1 = regdata[raddr1];

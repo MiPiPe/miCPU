@@ -9,9 +9,9 @@ reg rst;
 
 // Instantiate the Unit Under Test (UUT)
 part2_with_cache uut (
-          .clk(clk),
-          .rst(rst)
-      );
+                     .clk(clk),
+                     .rst(rst)
+                 );
 
 always #15 clk = ~clk;
 initial begin

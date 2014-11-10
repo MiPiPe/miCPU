@@ -23,6 +23,7 @@ wire write_back;
 wire [11:0] wb_addr;
 wire [255:0] wb_data;
 wire [255:0] fetch_data;
+wire [11:0] fetch_addr;
 wire clk_lock;
 
 //Data memory
@@ -86,9 +87,9 @@ wire [`ISIZE-1:0] PC_jal_P3;
 
 PC1 pc(.clk(clk_gate),.rst(rst),.nextPC(PCIN),.currPC(PCOUT));
 
-memory im( .clk(clk), .rst(rst), .wen(1'b0), .addr(PCOUT), .data_in(16'b0), .data_out(INST));
+memory im( .clk(clk_gate), .rst(rst), .wen(1'b0), .addr(PCOUT), .data_in(16'b0), .data_out(INST));
 
-assign clk_gate = (clk & clk_lock)? 1'b1 : 1'b0;
+// assign clk_gate = (clk & clk_lock)? 1'b1 : 1'b0;
 assign PCSrc = (branch_P1 & zero)? 1'b1 : 1'b0;
 adder PCAdder(.a(PCOUT), .b(16'b1), .out(nPC));
 adder BranchAdder(.a(nPC_P1), .b(imm_extended_P1), .out(branch_adder_out));
@@ -218,23 +219,26 @@ data_memory DM (
                 .clk(clk),
                 .rst(rst),
                 .wen(write_back),
-                .addr(wb_addr),
+                .waddr(wb_addr),
+                .raddr(fetch_addr),
                 .write_data(wb_data),
                 .read_data(fetch_data)
             );
 cache CA (
           .clk(clk),
           .rst(rst),
-          .mem_read(mem_read_P2), 
+          .mem_read(mem_read_P2),
           .mem_write(mem_write_P2),
           .addr(result_P2),
           .cache_data_in(rdata2_P2),
+          .fetch_addr(fetch_addr),
           .fetch_data(fetch_data),
           .cache_data_out(rdata_mem),
-          .clk_lock(clk_lock),
+          //.clk_lock(clk_lock),
           .write_back(write_back),
           .wb_addr(wb_addr),
-          .wb_data(wb_data)
-        );
+          .wb_data(wb_data),
+          .clk_out(clk_gate)
+      );
 
 endmodule

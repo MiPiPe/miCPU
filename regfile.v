@@ -39,7 +39,7 @@ begin
         regdata[1] <=5;//initialization regdata[1] is initialized with 5.
     end
     else
-      regdata[waddr] <= ((wen == 1) && (waddr != 0)) ? wdata : regdata[waddr];
+        regdata[waddr] <= ((wen == 1) && (waddr != 0)) ? wdata : regdata[waddr];
 end
 
 assign rdata1 = regdata[raddr1];
